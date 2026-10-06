@@ -51,7 +51,7 @@ function fmt(v){return Number.isInteger(v)?String(v):Number(v).toFixed(1).replac
 function timeOf(r){
  const t=r.total_time_min??r.total_time??r.time_min;
  if(t!=null) return num(t);
- const a=r.prep_time_min??r.preparation_time_min??0,b=r.cook_time_min??r.cooking_time_min??0;
+ const a=r.prep_minutes??r.prep_time_min??r.preparation_time_min??0,b=r.cook_minutes??r.cook_time_min??r.cooking_time_min??0;
  return (num(a)+num(b))||null;
 }
 function showToast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(showToast.t);showToast.t=setTimeout(()=>t.classList.remove("show"),1800)}
