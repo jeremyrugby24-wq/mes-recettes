@@ -42,19 +42,123 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;ma
 @media(max-width:700px){#authPanel{margin:14px auto 20px;border-radius:20px}.authHero{padding:22px 20px 18px}.authContent{padding:20px}.authHero h2{font-size:23px}}.panel[hidden]{display:none}.panel h2{margin:0 0 12px}.authForm{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;align-items:end}.authForm label{display:block;font-size:13px;color:var(--muted)}.authForm input{display:block;width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin-top:4px}.planItem{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.planItem:last-child{border-bottom:0}.planItem .planTitle{flex:1;font-weight:700}.planItem small{display:block;color:var(--muted);font-weight:400}.planItem button{border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:#fff}.planDone{opacity:.65}
 @media(max-width:700px){.cartRecipe{grid-template-columns:78px minmax(0,1fr);gap:9px}.cartRecipeImage{height:76px}.planRecipeImage{width:82px;height:78px}.wrap{padding:14px 12px 32px}body{font-size:15px}header{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.96);backdrop-filter:blur(10px);margin:0 -12px 12px;padding:12px;box-shadow:0 1px 0 rgba(0,0,0,.05)}header h1{font-size:25px}header p{display:none}.cartBtn{min-height:42px}.controls{gap:8px;margin:10px 0}.controls input,.controls select{min-height:46px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border-radius:14px}.card img{height:145px}.cardBody{padding:11px}.card h2{font-size:16px;margin-bottom:6px}.desc{font-size:12px;-webkit-line-clamp:2;margin-bottom:8px}.meta{gap:4px;margin-bottom:10px}.pill{font-size:10px;padding:4px 6px}.card .btn{min-height:42px;padding:9px 8px;font-size:13px}.overlay{padding:0}header{align-items:flex-start;gap:12px}header .cartBtn{padding:10px 12px}.controls{grid-template-columns:1fr}.card img{height:145px}.overlay{padding:0}.modalBox{height:100dvh;max-height:none;border-radius:0}.modalHero{height:220px}.modalScroll{padding:20px 17px 28px}.modalTop{gap:10px}.portionBar{justify-content:center}.drawer{width:100%;height:92dvh;top:auto;bottom:0;border-radius:20px 20px 0 0;transform:translateY(105%);transition:transform .22s ease}.drawer.open{transform:translateY(0)}.drawerHead{padding:15px 16px}.drawerBody{padding:14px 16px 24px}.drawerFoot{padding:12px 16px}.drawerFoot .btn{min-height:44px}.ings li{font-size:14px}.steps{font-size:14px}}
 @media(min-width:701px) and (max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* --- Refonte chaleureuse : cuisine, lisibilité et confort --- */
+:root{--green:#426447;--green2:#304e35;--cream:#fbf6ed;--ink:#292a22;--muted:#777366;--line:#e9e0d2;--card:#fffdf9;--shadow:0 10px 30px rgba(77,57,34,.07);--terracotta:#c86e4a;--sage:#e8eee4;--butter:#f4e5c7}
+body{background:radial-gradient(ellipse at 10% 0%,rgba(244,229,199,.42),transparent 36%),var(--cream);color:var(--ink)}
+.wrap{width:min(1440px,100%);padding:28px 32px 72px}
+header{align-items:center;padding:10px 0 22px;margin-bottom:24px;border-bottom:1px solid rgba(201,185,160,.48)}
+.brandBlock{display:flex;align-items:center;gap:14px;min-width:0}
+.brandIcon{display:grid;place-items:center;width:58px;height:58px;flex:none;border-radius:19px;background:#f1dfc9;font-size:29px;box-shadow:inset 0 0 0 1px rgba(164,108,69,.08)}
+.brandEyebrow{display:block;color:var(--terracotta);font-size:10px;letter-spacing:.16em;font-weight:850;margin-bottom:3px}
+header h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,3.4vw,43px);font-weight:700;letter-spacing:-.045em;line-height:1.05;color:#303e2f;margin:0 0 6px}
+header p{font-size:14px;color:var(--muted)}
+.headActions{gap:9px}
+.btn{border-radius:13px;background:var(--green);padding:12px 17px;box-shadow:0 3px 0 rgba(32,56,37,.08);transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 7px 16px rgba(42,68,45,.14)}
+.btn.secondary{background:#fffaf2;color:var(--green);border:1px solid #e9decd;box-shadow:none}
+.btn.secondary:hover{background:#f4ead9}
+.cartBtn{background:var(--terracotta);box-shadow:0 3px 0 rgba(124,60,38,.1)}
+.cartBtn:hover{background:#b85d3b}
+.controls{grid-template-columns:minmax(0,1fr) 250px;gap:14px;margin:24px 0 12px}
+.controls input,.controls select{min-height:52px;padding:14px 16px;border-color:#e5dac9;border-radius:15px;background:rgba(255,253,249,.96);box-shadow:0 2px 8px rgba(77,57,34,.025);color:var(--ink)}
+.controls input:focus,.controls select:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(66,100,71,.13)}
+#count{font-size:13px;font-weight:700;letter-spacing:.02em;color:#777366;margin:12px 0 18px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:23px}
+.card{border:1px solid #eee5d8;border-radius:22px;background:var(--card);box-shadow:0 7px 22px rgba(77,57,34,.045);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(77,57,34,.12);border-color:#e0d2bd}
+.card img{height:210px;background:#f1e7d8}
+.cardBody{padding:19px;gap:0}
+.card h2{font-family:Georgia,"Times New Roman",serif;font-size:22px;letter-spacing:-.02em;line-height:1.2;margin-bottom:9px}
+.desc{color:#777366;font-size:14px;line-height:1.55;-webkit-line-clamp:3}
+.meta{gap:6px;margin-top:auto;margin-bottom:16px}
+.pill{background:#f2eee4;color:#4b6048;border:1px solid #eae2d4;padding:6px 9px;font-size:11px}
+.card .btn{min-height:46px}
+.panel{background:rgba(255,253,249,.97);border-color:#e9e0d2;border-radius:22px;box-shadow:0 10px 30px rgba(77,57,34,.06);padding:24px}
+#authPanel{box-shadow:0 16px 48px rgba(77,57,34,.11);border-color:#e9dfd1}
+.authHero{background:linear-gradient(135deg,#405f43,#6c8056)}
+.authMark{border-radius:17px;background:rgba(255,255,255,.17)}
+.modalBox{border-radius:26px;background:#fffdf9}
+.modalHero{height:300px;background:#f1e7d8}
+.modalScroll{padding:28px 32px 32px}
+.modalTop h2{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.03em}
+.stat{background:#f5efe4;border:1px solid #eee3d2;border-radius:13px}
+.portionBar{background:#f8f2e8;border-color:#eee2d0}
+.stepBtn{background:var(--green);border-radius:13px}
+.sectionTitle{font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.ings li{padding:13px 5px;border-bottom-color:#e9e0d2}
+.steps li{padding-top:9px;padding-bottom:9px;line-height:1.65}
+.modalActions{background:#fffdf9}
+.iconBtn{border-radius:14px;background:#fffaf2;border-color:#e9decd}
+.drawer{background:#fffdf9}
+.drawerHead,.drawerFoot{border-color:#e9e0d2}
+.drawerHead h2,.shopping h3,.drawerBody>h3{font-family:Georgia,"Times New Roman",serif}
+.cartRecipe{border-color:#eee5d8}
+.cartRecipeImage,.planRecipeImage{border-radius:14px;background:#f1e7d8}
+.qtyRow button{border-color:#e8dece;background:#faf5ec;border-radius:11px;min-width:38px;min-height:38px}
+.shoppingList li{border-bottom-color:#e9e0d2;padding:11px 0}
+.toast{border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.16)}
+button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid #d68a5c;outline-offset:3px}
+img{color:#777366}
+@media(hover:none){.card:hover,.btn:hover{transform:none;box-shadow:var(--shadow)}}
+@media(max-width:900px){.wrap{padding:20px 20px 56px}header{align-items:flex-start}.brandIcon{width:52px;height:52px}.headActions .btn{padding:10px 12px}}
+@media(max-width:700px){
+ .wrap{padding:10px 12px 38px}
+ header{position:sticky;top:0;z-index:20;background:rgba(251,246,237,.95);backdrop-filter:blur(14px);margin:0 -12px 16px;padding:12px;box-shadow:0 1px 0 rgba(201,185,160,.45);align-items:center;gap:10px}
+ .brandBlock{gap:9px}.brandIcon{width:42px;height:42px;border-radius:14px;font-size:22px}
+ .brandEyebrow{font-size:8px;letter-spacing:.12em;margin-bottom:2px}
+ header h1{font-size:25px;margin-bottom:3px}
+ header p{display:none}
+ .headActions{gap:5px;flex-wrap:nowrap}
+ .headActions .btn{font-size:0;padding:10px 11px;min-width:42px;min-height:42px}
+ .headActions #openPlan{font-size:0}.headActions #openPlan::first-letter{font-size:16px}
+ .headActions #openAuth{font-size:0}.headActions #openAuth::first-letter{font-size:16px}
+ .headActions .cartBtn{font-size:12px;padding:9px 10px;min-width:0}
+ .controls{grid-template-columns:1fr;gap:9px;margin:14px 0 10px}
+ .controls input,.controls select{min-height:49px;border-radius:13px}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .card{border-radius:17px}
+ .card img{height:clamp(115px,29vw,175px)}
+ .cardBody{padding:12px}
+ .card h2{font-size:17px;line-height:1.22}
+ .desc{font-size:12px;line-height:1.45;-webkit-line-clamp:2}
+ .meta{gap:4px;margin-bottom:11px}
+ .pill{font-size:10px;padding:4px 6px}
+ .card .btn{font-size:12px;padding:9px 6px;min-height:42px;border-radius:11px}
+ .panel{padding:17px;border-radius:18px}
+ .modalHero{height:230px}
+ .modalScroll{padding:20px 17px 26px}
+ .modalBox{border-radius:0}
+}
+@media(max-width:390px){
+ .brandEyebrow{display:none}
+ header h1{font-size:23px}
+ .brandIcon{width:37px;height:37px;font-size:20px}
+ .headActions .btn{padding:8px;min-width:38px}
+ .headActions .cartBtn{font-size:11px;padding:8px}
+ .grid{grid-template-columns:1fr}
+ .card img{height:190px}
+ .cardBody{padding:15px}
+ .card h2{font-size:20px}
+ .desc{font-size:13px;-webkit-line-clamp:3}
+ .pill{font-size:11px}
+ .card .btn{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 <main class="wrap">
 <header>
-<div><h1>🍽️ Mes recettes</h1><p>Des recettes simples, gourmandes et riches en protéines.</p></div>
-<div class="headActions"><button class="btn secondary" id="openPlan">📅 Mon planning</button><button class="btn secondary" id="openAuth">👤 Connexion</button><button class="btn cartBtn" id="openCart">🛒 Courses <span id="cc">0</span></button></div>
+<div class="brandBlock"><div class="brandIcon" aria-hidden="true">🍅</div><div class="brandCopy"><span class="brandEyebrow">LA CUISINE DU QUOTIDIEN</span><h1>Mes recettes</h1><p>Des idées simples, gourmandes et riches en protéines.</p></div></div>
+<nav class="headActions" aria-label="Navigation principale"><button class="btn secondary" id="openPlan">📅 Mon planning</button><button class="btn secondary" id="openAuth">👤 Connexion</button><button class="btn cartBtn" id="openCart">🛒 Courses <span id="cc">0</span></button></nav>
 </header>
 <section id="planPanel" class="panel" hidden></section>
 <div class="controls" id="recipeControls">
-<input id="q" type="search" placeholder="Rechercher une recette ou un ingrédient…" autocomplete="off">
-<select id="f"><option value="all">Toutes les recettes</option><option value="p">≥ 40 g de protéines</option><option value="k">≤ 500 kcal</option></select>
+<input id="q" type="search" aria-label="Rechercher une recette ou un ingrédient" placeholder="🔎 Rechercher une recette ou un ingrédient…" autocomplete="off">
+<select id="f" aria-label="Filtrer les recettes"><option value="all">Tous les critères</option><option value="p">💪 ≥ 40 g de protéines</option><option value="k">🔥 ≤ 500 kcal</option></select>
 </div>
 <p id="count"></p>
 <div id="grid" class="grid"><div class="loading">Chargement des recettes…</div></div>
