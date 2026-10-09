@@ -248,7 +248,7 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#addPlan")){addCurrentToPlan();return}
   const done=e.target.closest("[data-plan-done]");if(done){markPlanDone(done.dataset.planDone,done.checked);return}
   const rem=e.target.closest("[data-plan-remove]");if(rem){removePlan(rem.dataset.planRemove);return}
- const open=e.target.closest("[data-open]");if(open){openRecipe(open.dataset.open);return}
+ const open=e.target.closest("[data-open]");if(open){if(open.closest("#drawer"))closeDrawer();openRecipe(open.dataset.open);return}
  if(e.target.closest("#closeModal")){closeModal();return}
  if(e.target.closest("#minus")){changePortions(-1);return}
  if(e.target.closest("#plus")){changePortions(1);return}
