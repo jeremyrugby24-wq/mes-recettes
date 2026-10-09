@@ -378,7 +378,16 @@ async function load(){
  try{
   const bytes=Uint8Array.from(atob(B64),c=>c.charCodeAt(0));
   const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"));
-  const txt=await new Response(stream).text();const data=JSON.parse(txt);R=data.recipes||[];render();renderAuth();renderPlan();if(userSession)await loadPlan();
+  const txt=await new Response(stream).text();const data=JSON.parse(txt);R=data.recipes||[];
+  // Photos culinaires propres, sans texte incrusté — sources Unsplash gratuites.
+  const foodPhotos=[
+   {match:/buffalo/i,url:"https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=1200&q=85"},
+   {match:/po[eê]l[eé]e m[eé]diterran[eé]enne/i,url:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=85"},
+   {match:/curry rouge tha[iï]/i,url:"https://images.unsplash.com/photo-1605461682195-9fd4d079a41d?auto=format&fit=crop&w=1200&q=85"},
+   {match:/pa[eë]lla au poulet/i,url:"https://images.unsplash.com/photo-1714383611437-485d97141913?auto=format&fit=crop&w=1200&q=85"}
+  ];
+  R.forEach(recipe=>{const photo=foodPhotos.find(p=>p.match.test(recipe.title||""));if(photo)recipe.image_url=photo.url;});
+  render();renderAuth();renderPlan();if(userSession)await loadPlan();
  }catch(err){console.error(err);document.getElementById("grid").innerHTML='<div class="error">Impossible de charger les recettes. Recharge la page.</div>'}
 }
 (async()=>{await refreshSession();await load();})();
