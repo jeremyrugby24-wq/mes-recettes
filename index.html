@@ -131,7 +131,7 @@ async function refreshSession(){
 async function authSubmit(signup){
  const email=document.getElementById("authEmail").value.trim(),password=document.getElementById("authPassword").value,msg=document.getElementById("authMessage");
  msg.textContent="Connexion en cours…";
- const result=signup?await supabaseClient.auth.signUp({email,password}):await supabaseClient.auth.signInWithPassword({email,password});
+ const result=signup?await supabaseClient.auth.signUp({email,password,options:{emailRedirectTo:window.location.origin+window.location.pathname}}):await supabaseClient.auth.signInWithPassword({email,password});
  if(result.error){msg.textContent=result.error.message;return}
  if(signup&&!result.data.session){msg.textContent="Compte créé. Vérifie ta boîte mail pour confirmer l'adresse, puis connecte-toi.";return}
  userSession=result.data.session;msg.textContent=signup?"Compte créé !":"Connexion réussie.";renderAuth();await loadPlan();showToast("Connecté !");
