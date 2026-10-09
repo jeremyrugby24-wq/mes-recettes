@@ -19,7 +19,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;ma
 .drawer{position:fixed;z-index:60;top:0;right:0;height:100dvh;width:min(470px,100%);background:#fff;box-shadow:-18px 0 50px rgba(0,0,0,.2);transform:translateX(105%);transition:transform .22s ease;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawerHead{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid var(--line)}.drawerHead h2{margin:0;font-size:22px}.drawerBody{overflow:auto;padding:18px 20px 30px}.cartRecipe{padding:13px 0;border-bottom:1px solid var(--line)}.cartRecipeTitle{font-weight:750;margin-bottom:9px}.qtyRow{display:flex;align-items:center;gap:8px}.qtyRow button{width:38px;height:38px;border:1px solid var(--line);background:#f6f7f5;border-radius:10px;font-weight:800}.qty{min-width:32px;text-align:center;font-weight:800}.remove{margin-left:auto;color:#a33;border:0;background:transparent;font-size:13px}.shopping{margin-top:22px}.shopping h3{margin:0 0 8px}.shoppingList{list-style:none;padding:0;margin:0}.shoppingList li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed #ddd}.empty{text-align:center;color:var(--muted);padding:35px 10px}.drawerFoot{padding:14px 20px;border-top:1px solid var(--line);display:flex;gap:10px;flex-wrap:wrap}.drawerFoot .btn{flex:1;min-width:130px}.cartActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.cartActions .btn{min-height:44px}.shareBtn{background:#edf2ee;color:var(--green)}
 .drawerShade{position:fixed;inset:0;background:rgba(18,25,21,.45);z-index:55;display:none}.drawerShade.open{display:block}.toast{position:fixed;z-index:100;left:50%;bottom:24px;transform:translate(-50%,20px);background:#202820;color:#fff;padding:11px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
 .loading{text-align:center;padding:50px;color:var(--muted)}.error{background:#fff0f0;color:#9b2525;padding:16px;border-radius:12px}
- .headActions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.headActions .btn{font-size:14px;padding:9px 11px}
+ .headActions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.headActions .btn{font-size:14px;padding:9px 11px}.accountBtn{display:inline-flex;align-items:center;gap:8px}.accountAvatar{width:26px;height:26px;border-radius:50%;object-fit:cover;background:#e8eee9}.accountInitial{width:26px;height:26px;border-radius:50%;display:inline-grid;place-items:center;background:#dce9df;color:var(--green);font-weight:800}
 .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin:0 0 18px;box-shadow:var(--shadow)}
 #authPanel{width:min(520px,100%);margin:22px auto 28px;padding:0;overflow:hidden;border-radius:24px}
 .authHero{padding:25px 26px 20px;background:linear-gradient(135deg,#315f46,#477d5e);color:#fff}
@@ -137,10 +137,21 @@ function openDrawer(){renderCart();document.getElementById("drawer").classList.a
 function closeDrawer(){document.getElementById("drawer").classList.remove("open");document.getElementById("drawerShade").classList.remove("open");document.getElementById("drawer").setAttribute("aria-hidden","true")}
 
 function showPanel(which){document.getElementById("authPanel").hidden=which!=="auth";document.getElementById("planPanel").hidden=which!=="plan";if(which==="auth")renderAuth();if(which==="plan")renderPlan();document.getElementById(which==="auth"?"authPanel":"planPanel").scrollIntoView({behavior:"smooth",block:"start"})}
+function updateAccountButton(){
+ const btn=document.getElementById("openAuth");if(!btn)return;
+ if(!userSession){btn.classList.remove("accountBtn");btn.innerHTML="👤 Connexion";return}
+ const meta=userSession.user.user_metadata||{},name=meta.full_name||meta.name||userSession.user.email?.split("@")[0]||"Mon compte",first=name.trim().split(/\s+/)[0],avatar=meta.avatar_url||meta.picture;
+ btn.classList.add("accountBtn");
+ btn.innerHTML=(avatar?'<img class="accountAvatar" src="'+esc(avatar)+'" alt="">':'<span class="accountInitial">'+esc(first.charAt(0).toUpperCase())+'</span>')+'<span>'+esc(first)+'</span>';
+}
 function renderAuth(){
  const p=document.getElementById("authPanel");
- if(userSession){p.innerHTML='<h2>👤 Mon compte</h2><p>Connecté en tant que <b>'+esc(userSession.user.email||"")+'</b></p><button class="btn danger" id="signOut">Se déconnecter</button>';document.getElementById("openAuth").textContent="👤 Mon compte";return}
- document.getElementById("openAuth").textContent="👤 Connexion";
+ if(userSession){
+  const meta=userSession.user.user_metadata||{},name=meta.full_name||meta.name||userSession.user.email?.split("@")[0]||"Mon compte",avatar=meta.avatar_url||meta.picture;
+  p.innerHTML='<div class="modalTop"><div><h2>👤 Bonjour '+esc(name.trim().split(/\s+/)[0])+' !</h2>'+(avatar?'<img class="accountAvatar" src="'+esc(avatar)+'" alt="" style="width:54px;height:54px;margin:12px 0">':'')+'<p class="modalDesc">Connecté avec <b>'+esc(userSession.user.email||"")+'</b></p></div></div><button class="btn danger" id="signOut">Se déconnecter</button>';
+  updateAccountButton();return;
+ }
+ updateAccountButton();
  p.innerHTML='<div class="authHero"><div class="authMark">🍽️</div><h2>Ravi de te revoir !</h2><p>Connecte-toi pour retrouver ton planning et tes recettes.</p></div><div class="authContent"><form id="authForm" class="authForm"><label for="authEmail">Adresse e-mail<input type="email" id="authEmail" autocomplete="email" placeholder="toi@exemple.fr" required></label><div><label for="authPassword">Mot de passe</label><div class="passwordWrap"><input type="password" id="authPassword" autocomplete="current-password" placeholder="6 caractères minimum" minlength="6" required><button class="passwordToggle" type="button" id="togglePassword" aria-label="Afficher le mot de passe">Afficher</button></div><div class="authLinks"><button type="button" class="textButton" id="forgotPassword">Mot de passe oublié ?</button></div></div><button class="btn authSubmit" type="submit" id="signIn">Se connecter</button><button class="btn secondary authSecondary" type="button" id="signUp">Créer un compte</button></form><div class="authDivider">ou continuer avec</div><button type="button" class="btn googleBtn" id="googleSignIn"><span class="googleG">G</span> Continuer avec Google</button><p id="authMessage" role="status" aria-live="polite"></p><p class="authFoot">Ton compte permet de synchroniser ton planning entre tes appareils.</p></div>';
 }
 async function refreshSession(){
@@ -236,7 +247,7 @@ async function load(){
   const txt=await new Response(stream).text();const data=JSON.parse(txt);R=data.recipes||[];render();renderAuth();renderPlan();if(userSession)await loadPlan();
  }catch(err){console.error(err);document.getElementById("grid").innerHTML='<div class="error">Impossible de charger les recettes. Recharge la page.</div>'}
 }
-load();
+(async()=>{await refreshSession();await load();})();
 </script>
 </body>
 </html>
