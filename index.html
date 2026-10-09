@@ -386,17 +386,7 @@ async function load(){
    {match:/curry rouge tha[iï]/i,url:"https://images.unsplash.com/photo-1605461682195-9fd4d079a41d?auto=format&fit=crop&w=1200&q=85"},
    {match:/pa[eë]lla au poulet/i,url:"https://images.unsplash.com/photo-1714383611437-485d97141913?auto=format&fit=crop&w=1200&q=85"}
   ];
-  // Remplacement garanti des quatre premières cartes affichées :
-  // on ne dépend pas des intitulés exacts des recettes.
-  const firstCardPhotos=[
-   "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85",
-   "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1200&q=85",
-   "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=85",
-   "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=1200&q=85"
-  ];
-  R.slice(0,4).forEach((recipe,i)=>{recipe.image_url=firstCardPhotos[i];});
-  // Pour les autres recettes, on applique aussi les correspondances par intitulé.
-  R.slice(4).forEach(recipe=>{const photo=foodPhotos.find(p=>p.match.test(recipe.title||""));if(photo)recipe.image_url=photo.url;});
+  R.forEach(recipe=>{const photo=foodPhotos.find(p=>p.match.test(recipe.title||""));if(photo)recipe.image_url=photo.url;});
   render();renderAuth();renderPlan();if(userSession)await loadPlan();
  }catch(err){console.error(err);document.getElementById("grid").innerHTML='<div class="error">Impossible de charger les recettes. Recharge la page.</div>'}
 }
