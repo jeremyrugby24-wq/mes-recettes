@@ -169,6 +169,28 @@ img{color:#777366}
 .shoppingList li>span{min-width:0;overflow-wrap:anywhere}
 .shoppingList li>b{flex-shrink:0}
 @media(max-width:360px){.qtyRow{grid-template-columns:38px 32px 38px}.qtyRow .remove{grid-column:1/-1;justify-self:start}.cartRecipe{align-items:start}.drawerHead h2{font-size:20px}}
+
+ .planning-mode #grid{display:none}
+/* Planning follows the warm recipe catalogue palette. */
+#planPanel{max-width:1100px;margin:0 auto 24px;padding:28px;background:#fffdf9}
+.planEyebrow{display:block;font-size:11px;letter-spacing:.15em;font-weight:750;color:var(--green);margin-bottom:8px}
+#planPanel h2{font-family:Georgia,serif;font-size:clamp(29px,4vw,40px);letter-spacing:-.03em;margin:0 0 10px}
+#planPanel>.modalTop{padding:0 0 22px;align-items:center}
+#planPanel .modalDesc{font-size:14px;max-width:650px;line-height:1.6}
+.planRecipeRow{display:grid;grid-template-columns:28px 108px minmax(0,1fr) auto;gap:18px;border:1px solid #e9e0d2;border-radius:18px;background:#fff;margin:12px 0;padding:14px;box-shadow:0 4px 16px #4d392207}
+.planRecipeImage{width:108px;height:96px;object-fit:cover;border-radius:12px}
+.planRecipeTitleButton{display:block;font-size:17px;line-height:1.4;color:#292a22;overflow-wrap:anywhere}
+.planRecipeMain .planTitle{display:inline-block;margin-top:9px;background:#f1f4eb;color:#526447;border-radius:20px;padding:5px 10px;font-size:12px;line-height:1.4}
+.planRecipeRow input{appearance:none;width:26px;height:26px;margin:0;border:2px solid #b4c1ac;border-radius:8px;background:#fff;cursor:pointer;display:grid;place-content:center}
+.planRecipeRow input:checked{background:var(--green);border-color:var(--green)}
+.planRecipeRow input:checked:after{content:'✓';color:white;font-size:18px;font-weight:bold}
+.planRecipeRow input:focus-visible{outline:3px solid #c86e4a;outline-offset:3px}
+.planRecipeRow>button[data-plan-remove]{border:1px solid #e9e0d2;border-radius:12px;padding:10px 14px;min-height:44px;background:#fbf6ed;color:#7b5142;font-size:13px;font-weight:650}
+.planRecipeRow>button[data-plan-remove]:hover{background:#f7e9df;border-color:#cba48b}
+.planRecipeRow.planDone{opacity:1;background:#f3f6ef;border-color:#cbd8c7}
+.planDone .planRecipeTitleButton{color:#66735f}
+#planPanel>p{color:var(--muted);line-height:1.7}
+@media(max-width:600px){#planPanel{padding:18px 14px}.planRecipeRow{grid-template-columns:26px 76px minmax(0,1fr);gap:10px;padding:12px}.planRecipeImage{width:76px;height:82px}.planRecipeTitleButton{font-size:15px}.planRecipeRow>button[data-plan-remove]{grid-column:3;justify-self:start;padding:8px 12px}.planRecipeMain .planTitle{font-size:11px}.planRecipeRow input{align-self:start;margin-top:28px}#planPanel>.modalTop{gap:10px;align-items:start}#planPanel .modalDesc{font-size:13px}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link rel="stylesheet" href="assets/cooking.css?v=4">
@@ -358,9 +380,9 @@ async function loadPlan(){
 }
 function renderPlan(){
  const p=document.getElementById("planPanel");
- if(!userSession){p.innerHTML='<h2>📅 Mon planning</h2><p>Connecte-toi pour créer ton planning personnel.</p><button class="btn" id="planLogin">Se connecter</button>';return}
+ if(!userSession){p.innerHTML='<span class="planEyebrow">MES REPAS À VENIR</span><h2>Mon planning</h2><p>Connecte-toi pour créer ton planning personnel.</p><button class="btn" id="planLogin">Se connecter</button>';return}
  const active=plannedRecipes;
- p.innerHTML='<div class="modalTop"><div><h2>📅 Mon planning</h2><p class="modalDesc">Clique sur une recette pour revoir sa fiche. Les recettes réalisées disparaissent ici après 7 jours.</p></div><button class="iconBtn" id="refreshPlan" aria-label="Actualiser">↻</button></div>'+(active.length?active.map(item=>{const r=R.find(x=>String(x.id)===String(item.recipe_id));return '<div class="planRecipeRow '+(item.completed_at?'planDone':'')+'"><input type="checkbox" data-plan-done="'+esc(item.id)+'" '+(item.completed_at?'checked':'')+' aria-label="Recette réalisée">'+(r?'<img class="planRecipeImage" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+'" data-open="'+esc(r.id)+'">':'<div class="planRecipeImage"></div>')+'<div class="planRecipeMain"><button class="planRecipeTitleButton" data-open="'+esc(r?.id||"")+'">'+esc(r?.title||"Recette")+'</button><small class="planTitle">'+(item.completed_at?'Réalisée le '+new Date(item.completed_at).toLocaleDateString("fr-FR"):(item.portions||1)+' portion(s) prévue(s)')+'</small></div><button data-plan-remove="'+esc(item.id)+'">Retirer</button></div>'}).join(""):'<p>Ton planning est vide. Ajoute des recettes au panier, puis utilise « Ajouter les recettes au planning ».</p>');
+ p.innerHTML='<div class="modalTop"><div><span class="planEyebrow">MES REPAS À VENIR</span><h2>Mon planning</h2><p class="modalDesc">Clique sur une recette pour revoir sa fiche. Les recettes réalisées disparaissent ici après 7 jours.</p></div><button class="iconBtn" id="refreshPlan" aria-label="Actualiser">↻</button></div>'+(active.length?active.map(item=>{const r=R.find(x=>String(x.id)===String(item.recipe_id));return '<div class="planRecipeRow '+(item.completed_at?'planDone':'')+'"><input type="checkbox" data-plan-done="'+esc(item.id)+'" '+(item.completed_at?'checked':'')+' aria-label="Recette réalisée">'+(r?'<img class="planRecipeImage" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+'" data-open="'+esc(r.id)+'">':'<div class="planRecipeImage"></div>')+'<div class="planRecipeMain"><button class="planRecipeTitleButton" data-open="'+esc(r?.id||"")+'">'+esc(r?.title||"Recette")+'</button><small class="planTitle">'+(item.completed_at?'Réalisée le '+new Date(item.completed_at).toLocaleDateString("fr-FR"):(item.portions||1)+' portion'+((item.portions||1)>1?'s prévues':' prévue'))+'</small></div><button data-plan-remove="'+esc(item.id)+'">Retirer</button></div>'}).join(""):'<p>Ton planning est vide. Ajoute des recettes au panier, puis utilise « Ajouter les recettes au planning ».</p>');
 }
 async function addCurrentToPlan(){
  if(!userSession){showPanel("auth");showToast("Connecte-toi pour enregistrer ton planning");return}
