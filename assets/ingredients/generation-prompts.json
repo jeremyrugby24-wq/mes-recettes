@@ -1,0 +1,516 @@
+{
+  "generator": "OpenAI image generation built-in",
+  "date": "2026-11-01",
+  "selected_prompts": [
+    {
+      "id": "chicken-breast",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: one raw boneless skinless chicken breast fillet, pale pink, no bone or skin. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/chicken-breast.webp"
+    },
+    {
+      "id": "rice",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: a small low mound of dry long grain white rice, uncooked, no bowl. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/rice.webp"
+    },
+    {
+      "id": "milk",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: a small clear drinking glass of white milk. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/milk.webp"
+    },
+    {
+      "id": "cream",
+      "prompt": "Photorealistic isolated food product thumbnail. a small low clear glass ramekin holding smooth POURABLE liquid white light cooking cream. Flat glossy liquid surface with no stiff peaks, not whipped cream, not yogurt, not ice cream. Centered with generous transparent margins, natural food texture, real camera photograph, soft neutral daylight and subtle grounding shadow. Transparent background cutout. No table, no tile, no text or logos. Not emoji, 3D render or illustration.",
+      "asset": "assets/ingredients/cream.webp"
+    },
+    {
+      "id": "button-mushrooms",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: three real fresh white button mushrooms (champignons de Paris), one cut in half showing pale brown gills, NOT red toadstools. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/button-mushrooms.webp"
+    },
+    {
+      "id": "salt",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: a small loose mound of fine white kitchen salt crystals, no container. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/salt.webp"
+    },
+    {
+      "id": "pepper",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: a small loose mound of black peppercorns, no container. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/pepper.webp"
+    },
+    {
+      "id": "olive-oil",
+      "prompt": "Use case: product-mockup. Asset: realistic ingredient thumbnail for a French cooking website. Subject: a small clear glass cruet of golden olive oil with two green olives beside it, no branding. Professional macro food PRODUCT PHOTOGRAPHY, true edible natural textures and real proportions, three-quarter view. One small isolated ingredient arrangement centered with generous transparent margins. Soft neutral studio daylight, gentle grounding shadow, crisp edges. TRANSPARENT BACKGROUND, isolated cutout. No colored tile, no room, no table, no extra garnish, no text, no labels, no logo. Must look like a photograph, absolutely not emoji, 3D render, plastic model, cartoon, illustration or icon.",
+      "asset": "assets/ingredients/olive-oil.webp"
+    },
+    {
+      "id": "turkey-breast",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one raw boneless turkey breast fillet. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/turkey-breast.webp"
+    },
+    {
+      "id": "ground-beef",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small fresh mound of raw lean ground beef, natural red meat. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/ground-beef.webp"
+    },
+    {
+      "id": "beef-strips",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small portion of raw lean beef strips. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/beef-strips.webp"
+    },
+    {
+      "id": "salmon",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one raw fresh salmon fillet. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/salmon.webp"
+    },
+    {
+      "id": "cod",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one raw thick white cod fillet. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/cod.webp"
+    },
+    {
+      "id": "shrimp",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: five raw peeled shrimp, naturally translucent grey pink. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/shrimp.webp"
+    },
+    {
+      "id": "tofu",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a firm tofu block with three cubes. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/tofu.webp"
+    },
+    {
+      "id": "tuna",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: drained canned tuna flakes on a very small white saucer. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/tuna.webp"
+    },
+    {
+      "id": "pork-tenderloin",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small raw lean pork tenderloin cut. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/pork-tenderloin.webp"
+    },
+    {
+      "id": "eggs",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two real brown chicken eggs, one cracked with yolk in a tiny clear bowl. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/eggs.webp"
+    },
+    {
+      "id": "brown-rice",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of uncooked brown rice. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/brown-rice.webp"
+    },
+    {
+      "id": "wheat-noodles",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one dry nest of fine wheat noodles. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/wheat-noodles.webp"
+    },
+    {
+      "id": "rice-noodles",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small dry nest of thin white rice vermicelli. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/rice-noodles.webp"
+    },
+    {
+      "id": "penne",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small pile of dry penne pasta. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/penne.webp"
+    },
+    {
+      "id": "fusilli",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small pile of dry fusilli pasta spirals. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/fusilli.webp"
+    },
+    {
+      "id": "spaghetti",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small bundle of dry whole wheat spaghetti. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/spaghetti.webp"
+    },
+    {
+      "id": "lasagna",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: three flat dry lasagna sheets. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/lasagna.webp"
+    },
+    {
+      "id": "spaetzle",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of fresh pale yellow German spaetzle noodles. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/spaetzle.webp"
+    },
+    {
+      "id": "couscous",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of dry fine golden couscous grains. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/couscous.webp"
+    },
+    {
+      "id": "quinoa",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of uncooked pale quinoa grains. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/quinoa.webp"
+    },
+    {
+      "id": "polenta",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of golden uncooked fine polenta. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/polenta.webp"
+    },
+    {
+      "id": "bread",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two slices of whole wheat sandwich bread. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/bread.webp"
+    },
+    {
+      "id": "breadcrumbs",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose pile of fine dry breadcrumbs. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/breadcrumbs.webp"
+    },
+    {
+      "id": "flour",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of white wheat flour. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/flour.webp"
+    },
+    {
+      "id": "carrot",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two fresh orange carrots, one halved, short green tops. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/carrot.webp"
+    },
+    {
+      "id": "cucumber",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a short cucumber with three round slices. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/cucumber.webp"
+    },
+    {
+      "id": "zucchini",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one dark green zucchini with two cut slices. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/zucchini.webp"
+    },
+    {
+      "id": "broccoli",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: three fresh broccoli florets. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/broccoli.webp"
+    },
+    {
+      "id": "red-pepper",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one red bell pepper with one half showing seeds. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/red-pepper.webp"
+    },
+    {
+      "id": "yellow-pepper",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one yellow bell pepper with a cut half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/yellow-pepper.webp"
+    },
+    {
+      "id": "red-cabbage",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a wedge of purple red cabbage with layered cut face. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/red-cabbage.webp"
+    },
+    {
+      "id": "yellow-onion",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one yellow onion with a peeled half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/yellow-onion.webp"
+    },
+    {
+      "id": "red-onion",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one red onion and a cut half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/red-onion.webp"
+    },
+    {
+      "id": "shallot",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two pink shallots, one peeled and halved. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/shallot.webp"
+    },
+    {
+      "id": "leek",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one trimmed leek with several cut pale green rounds. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/leek.webp"
+    },
+    {
+      "id": "garlic",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a real garlic bulb, two peeled cloves and one unpeeled clove. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/garlic.webp"
+    },
+    {
+      "id": "ginger",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small fresh ginger root with a sliced end. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/ginger.webp"
+    },
+    {
+      "id": "tomato",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two ripe red tomatoes, one cut in half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/tomato.webp"
+    },
+    {
+      "id": "cherry-tomatoes",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small cluster of red cherry tomatoes, two halved. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/cherry-tomatoes.webp"
+    },
+    {
+      "id": "sun-dried-tomatoes",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small portion of dark red sun-dried tomato strips, drained, on a tiny white saucer. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/sun-dried-tomatoes.webp"
+    },
+    {
+      "id": "corn",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of yellow sweetcorn kernels. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/corn.webp"
+    },
+    {
+      "id": "peas",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of fresh green peas with one opened pod. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/peas.webp"
+    },
+    {
+      "id": "red-beans",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of drained cooked red kidney beans. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/red-beans.webp"
+    },
+    {
+      "id": "potato",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two unpeeled yellow potatoes, one cut in half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/potato.webp"
+    },
+    {
+      "id": "sweet-potato",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one orange sweet potato with two cut rounds. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/sweet-potato.webp"
+    },
+    {
+      "id": "apple",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one red apple with a cut wedge. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/apple.webp"
+    },
+    {
+      "id": "lettuce",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small fresh bunch of mixed green salad leaves. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/lettuce.webp"
+    },
+    {
+      "id": "bean-sprouts",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small bunch of fresh mung bean sprouts. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/bean-sprouts.webp"
+    },
+    {
+      "id": "spinach",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a few fresh spinach leaves. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/spinach.webp"
+    },
+    {
+      "id": "eggplant",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one small purple eggplant with two round slices. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/eggplant.webp"
+    },
+    {
+      "id": "mozzarella",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one white mozzarella ball with two slices. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/mozzarella.webp"
+    },
+    {
+      "id": "parmesan",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small wedge of Parmesan cheese with a few fine shavings. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/parmesan.webp"
+    },
+    {
+      "id": "cheddar",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small piece of orange cheddar cheese and two thin slices. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/cheddar.webp"
+    },
+    {
+      "id": "raclette",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two rectangular slices of pale yellow raclette cheese with brown rind. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/raclette.webp"
+    },
+    {
+      "id": "goat-cheese",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small round of soft fresh white goat cheese. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/goat-cheese.webp"
+    },
+    {
+      "id": "yogurt",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small white ceramic bowl of thick plain white yogurt. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/yogurt.webp"
+    },
+    {
+      "id": "butter",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small pale yellow pat of butter. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/butter.webp"
+    },
+    {
+      "id": "coconut-milk",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a tiny clear bowl of opaque white coconut milk with a small opened coconut piece behind it. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/coconut-milk.webp"
+    },
+    {
+      "id": "coconut-flakes",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small pile of finely grated white coconut with one thin coconut piece. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/coconut-flakes.webp"
+    },
+    {
+      "id": "tomato-passata",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small clear glass ramekin of smooth red tomato passata. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/tomato-passata.webp"
+    },
+    {
+      "id": "tomato-paste",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small dense mound of deep red tomato paste on a tiny white dish. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/tomato-paste.webp"
+    },
+    {
+      "id": "wholegrain-mustard",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small ramekin of coarse wholegrain mustard with visible mustard seeds. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/wholegrain-mustard.webp"
+    },
+    {
+      "id": "dijon-mustard",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small ramekin of smooth pale yellow Dijon mustard. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/dijon-mustard.webp"
+    },
+    {
+      "id": "honey",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small clear glass jar of golden honey with a short wooden honey dipper, no label. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/honey.webp"
+    },
+    {
+      "id": "balsamic-vinegar",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small clear glass cruet of very dark balsamic vinegar, no label. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/balsamic-vinegar.webp"
+    },
+    {
+      "id": "cider-vinegar",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small clear glass cruet of pale amber apple cider vinegar, no label. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/cider-vinegar.webp"
+    },
+    {
+      "id": "soy-sauce",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small white shallow dish containing dark soy sauce. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/soy-sauce.webp"
+    },
+    {
+      "id": "red-pesto",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a tiny white dish of coarse red sun-dried tomato pesto. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/red-pesto.webp"
+    },
+    {
+      "id": "red-curry-paste",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small spoonful of thick brick red Thai curry paste on a tiny white dish. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/red-curry-paste.webp"
+    },
+    {
+      "id": "parsley",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small fresh bunch of flat-leaf parsley. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/parsley.webp"
+    },
+    {
+      "id": "basil",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small fresh sprig of basil. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/basil.webp"
+    },
+    {
+      "id": "thyme",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small bunch of fresh thyme sprigs. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/thyme.webp"
+    },
+    {
+      "id": "dill",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small bunch of fresh dill fronds. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/dill.webp"
+    },
+    {
+      "id": "lemongrass",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two pale green fresh lemongrass stalks with a few sliced rings. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/lemongrass.webp"
+    },
+    {
+      "id": "paprika",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of deep red ground paprika. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/paprika.webp"
+    },
+    {
+      "id": "curry-powder",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of golden yellow curry powder. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/curry-powder.webp"
+    },
+    {
+      "id": "cumin",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of warm brown ground cumin. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/cumin.webp"
+    },
+    {
+      "id": "dried-herbs",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of finely crumbled dried herbs de Provence. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/dried-herbs.webp"
+    },
+    {
+      "id": "brown-sugar",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small loose mound of coarse light brown sugar crystals. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/brown-sugar.webp"
+    },
+    {
+      "id": "lemon",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one yellow lemon with one cut half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/lemon.webp"
+    },
+    {
+      "id": "lime",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: one green lime with one cut half. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/lime.webp"
+    },
+    {
+      "id": "lentils",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of cooked green lentils. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/lentils.webp"
+    },
+    {
+      "id": "chickpeas",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small mound of drained cooked chickpeas. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/chickpeas.webp"
+    },
+    {
+      "id": "pickles",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: two small whole cornichons with three cut slices. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/pickles.webp"
+    },
+    {
+      "id": "stock",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: a small clear glass bowl of golden vegetable stock. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/stock.webp"
+    },
+    {
+      "id": "spice-mix",
+      "prompt": "Use case: product-mockup. Asset: realistic isolated ingredient thumbnail for a French recipe site. Subject: three tiny white dishes holding salt, black pepper and warm brown spice powder. True professional food PRODUCT PHOTOGRAPHY, natural edible texture, realistic material and proportions. Centered three-quarter view, generous transparent margins, soft neutral studio daylight, subtle grounding shadow. TRANSPARENT BACKGROUND cutout. No colored tile, no table, no room, no garnish except specified, no packaging, no text, no logos. Absolutely NOT emoji, cartoon, 3D render, illustration or plastic icon.",
+      "asset": "assets/ingredients/spice-mix.webp"
+    },
+    {
+      "id": "sesame-oil",
+      "prompt": "Realistic isolated food product PHOTOGRAPH. a small clear glass cruet of amber sesame oil with a few beige sesame seeds beside it, no label. Centered with generous transparent margins, natural texture, soft neutral studio light, subtle ground shadow. Transparent background cutout. No text, no tile, no logo. Not emoji, not illustration, not 3D render.",
+      "asset": "assets/ingredients/sesame-oil.webp"
+    },
+    {
+      "id": "neutral-oil",
+      "prompt": "Realistic isolated food product PHOTOGRAPH. one small clear glass cruet of pale golden neutral cooking oil, no label. Centered with generous transparent margins, natural texture, soft neutral studio light, subtle ground shadow. Transparent background cutout. No text, no tile, no logo. Not emoji, not illustration, not 3D render.",
+      "asset": "assets/ingredients/neutral-oil.webp"
+    },
+    {
+      "id": "olives",
+      "prompt": "Realistic isolated food product PHOTOGRAPH. five real green pitted olives, one halved. Centered with generous transparent margins, natural texture, soft neutral studio light, subtle ground shadow. Transparent background cutout. No text, no tile, no logo. Not emoji, not illustration, not 3D render.",
+      "asset": "assets/ingredients/olives.webp"
+    },
+    {
+      "id": "rice-round",
+      "prompt": "Photorealistic isolated food product thumbnail. a small loose mound of uncooked short round white rice grains for paella, short plump grains, no bowl. Centered with generous transparent margins, natural food texture, real camera photograph, soft neutral daylight and subtle grounding shadow. Transparent background cutout. No table, no tile, no text or logos. Not emoji, 3D render or illustration.",
+      "asset": "assets/ingredients/rice-round.webp"
+    },
+    {
+      "id": "spring-onion",
+      "prompt": "Photorealistic isolated food product thumbnail. three fresh spring onions / scallions, small white bases and long green tubular stems, not a yellow onion. Centered with generous transparent margins, natural edible texture, real camera photograph, soft neutral daylight and subtle grounding shadow. Transparent background cutout. No table, no colored tile, no text, no logos. Not emoji, 3D render or illustration.",
+      "asset": "assets/ingredients/spring-onion.webp"
+    },
+    {
+      "id": "processed-cheese",
+      "prompt": "Photorealistic isolated food product thumbnail. one unwrapped small triangular wedge of creamy soft white light processed cheese, no foil, no packaging, not a mozzarella ball. Centered with generous transparent margins, natural edible texture, real camera photograph, soft neutral daylight and subtle grounding shadow. Transparent background cutout. No table, no colored tile, no text, no logos. Not emoji, 3D render or illustration.",
+      "asset": "assets/ingredients/processed-cheese.webp"
+    },
+    {
+      "id": "parsley-chives",
+      "prompt": "Photorealistic isolated food product thumbnail. a small bunch of fresh flat leaf parsley together with a few long thin chive stems. Centered with generous transparent margins, natural edible texture, real camera photograph, soft neutral daylight and subtle grounding shadow. Transparent background cutout. No table, no colored tile, no text, no logos. Not emoji, 3D render or illustration.",
+      "asset": "assets/ingredients/parsley-chives.webp"
+    },
+    {
+      "id": "thyme-garlic",
+      "prompt": "Photorealistic isolated food product thumbnail. a small fresh thyme sprig beside one peeled garlic clove and one unpeeled garlic clove. Centered with generous transparent margins, natural edible texture, real camera photograph, soft neutral daylight and subtle grounding shadow. Transparent background cutout. No table, no colored tile, no text, no logos. Not emoji, 3D render or illustration.",
+      "asset": "assets/ingredients/thyme-garlic.webp"
+    }
+  ]
+}

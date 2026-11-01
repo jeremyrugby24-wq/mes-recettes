@@ -1,0 +1,378 @@
+{
+  "method": "Somme des quantités en grammes × valeurs moyennes de travail pour 100 g / 100. Valeurs indicatives, arrondies à la portion. Les étiquettes des produits utilisés restent prioritaires. Pas de correction de rendement puisque les quantités sont indiquées à l’état cru, sec ou égoutté.",
+  "reference_context": "Les tables Ciqual donnent des teneurs moyennes pour 100 g de partie comestible. Les valeurs de travail ci-dessous sont des estimations usuelles et ne sont pas présentées comme une extraction exhaustive ou exacte de Ciqual.",
+  "context_url": "https://ciqual.anses.fr/cms/",
+  "foods": {
+    "chicken": {
+      "ingredient": "Blanc de poulet cru",
+      "kcal": 110,
+      "protein_g": 23.4,
+      "carbs_g": 0,
+      "fat_g": 1.2
+    },
+    "turkey": {
+      "ingredient": "Blanc de dinde cru",
+      "kcal": 110,
+      "protein_g": 22.4,
+      "carbs_g": 0.8,
+      "fat_g": 1.9
+    },
+    "beef": {
+      "ingredient": "Steak haché de bœuf 5 %",
+      "kcal": 133,
+      "protein_g": 21,
+      "carbs_g": 0,
+      "fat_g": 5
+    },
+    "pork": {
+      "ingredient": "Filet mignon de porc cru",
+      "kcal": 120,
+      "protein_g": 21,
+      "carbs_g": 0,
+      "fat_g": 4
+    },
+    "cod": {
+      "ingredient": "Pavé de cabillaud cru",
+      "kcal": 82,
+      "protein_g": 18,
+      "carbs_g": 0,
+      "fat_g": 0.7
+    },
+    "salmon": {
+      "ingredient": "Saumon cru",
+      "kcal": 208,
+      "protein_g": 20,
+      "carbs_g": 0,
+      "fat_g": 13
+    },
+    "shrimp": {
+      "ingredient": "Crevettes crues décortiquées",
+      "kcal": 85,
+      "protein_g": 20,
+      "carbs_g": 0,
+      "fat_g": 0.5
+    },
+    "tuna": {
+      "ingredient": "Thon au naturel égoutté",
+      "kcal": 116,
+      "protein_g": 26,
+      "carbs_g": 0,
+      "fat_g": 1
+    },
+    "tofu": {
+      "ingredient": "Tofu ferme nature",
+      "kcal": 148,
+      "protein_g": 15,
+      "carbs_g": 1.5,
+      "fat_g": 8.5
+    },
+    "egg": {
+      "ingredient": "Œuf entier sans coquille",
+      "kcal": 143,
+      "protein_g": 12.6,
+      "carbs_g": 0.7,
+      "fat_g": 9.5
+    },
+    "skyr": {
+      "ingredient": "Skyr nature 0 %",
+      "kcal": 63,
+      "protein_g": 10,
+      "carbs_g": 4,
+      "fat_g": 0.2
+    },
+    "parmesan": {
+      "ingredient": "Parmesan râpé",
+      "kcal": 400,
+      "protein_g": 33,
+      "carbs_g": 0,
+      "fat_g": 29
+    },
+    "rice": {
+      "ingredient": "Riz basmati (poids cru)",
+      "kcal": 353,
+      "protein_g": 7.5,
+      "carbs_g": 78,
+      "fat_g": 0.8
+    },
+    "quinoa": {
+      "ingredient": "Quinoa (poids cru)",
+      "kcal": 368,
+      "protein_g": 14,
+      "carbs_g": 64,
+      "fat_g": 6
+    },
+    "penne": {
+      "ingredient": "Penne complètes sèches",
+      "kcal": 350,
+      "protein_g": 13,
+      "carbs_g": 65,
+      "fat_g": 2.5
+    },
+    "fusilli": {
+      "ingredient": "Fusilli complets secs",
+      "kcal": 350,
+      "protein_g": 13,
+      "carbs_g": 65,
+      "fat_g": 2.5
+    },
+    "couscous": {
+      "ingredient": "Semoule de blé dur sèche",
+      "kcal": 360,
+      "protein_g": 12,
+      "carbs_g": 73,
+      "fat_g": 1.5
+    },
+    "polenta": {
+      "ingredient": "Polenta précuite sèche",
+      "kcal": 360,
+      "protein_g": 8,
+      "carbs_g": 77,
+      "fat_g": 1.2
+    },
+    "lentils": {
+      "ingredient": "Lentilles vertes cuites égouttées",
+      "kcal": 112,
+      "protein_g": 8,
+      "carbs_g": 16,
+      "fat_g": 0.5
+    },
+    "chickpeas": {
+      "ingredient": "Pois chiches cuits égouttés",
+      "kcal": 139,
+      "protein_g": 7,
+      "carbs_g": 19,
+      "fat_g": 3
+    },
+    "potato": {
+      "ingredient": "Pomme de terre crue",
+      "kcal": 77,
+      "protein_g": 2,
+      "carbs_g": 17,
+      "fat_g": 0.1
+    },
+    "carrot": {
+      "ingredient": "Carotte",
+      "kcal": 33,
+      "protein_g": 0.8,
+      "carbs_g": 6.7,
+      "fat_g": 0.2
+    },
+    "zucchini": {
+      "ingredient": "Courgette",
+      "kcal": 17,
+      "protein_g": 1.2,
+      "carbs_g": 2.1,
+      "fat_g": 0.3
+    },
+    "broccoli": {
+      "ingredient": "Brocoli",
+      "kcal": 34,
+      "protein_g": 2.8,
+      "carbs_g": 4,
+      "fat_g": 0.4
+    },
+    "pepper": {
+      "ingredient": "Poivron rouge",
+      "kcal": 29,
+      "protein_g": 1,
+      "carbs_g": 4.5,
+      "fat_g": 0.3
+    },
+    "leek": {
+      "ingredient": "Poireau",
+      "kcal": 32,
+      "protein_g": 1.5,
+      "carbs_g": 4.9,
+      "fat_g": 0.3
+    },
+    "spinach": {
+      "ingredient": "Épinards frais",
+      "kcal": 23,
+      "protein_g": 2.9,
+      "carbs_g": 1.4,
+      "fat_g": 0.4
+    },
+    "eggplant": {
+      "ingredient": "Aubergine",
+      "kcal": 25,
+      "protein_g": 1,
+      "carbs_g": 3.5,
+      "fat_g": 0.2
+    },
+    "tomato": {
+      "ingredient": "Tomate",
+      "kcal": 18,
+      "protein_g": 0.9,
+      "carbs_g": 2.6,
+      "fat_g": 0.2
+    },
+    "cucumber": {
+      "ingredient": "Concombre",
+      "kcal": 14,
+      "protein_g": 0.6,
+      "carbs_g": 2.5,
+      "fat_g": 0.1
+    },
+    "apple": {
+      "ingredient": "Pomme",
+      "kcal": 52,
+      "protein_g": 0.3,
+      "carbs_g": 12,
+      "fat_g": 0.2
+    },
+    "onion": {
+      "ingredient": "Oignon",
+      "kcal": 40,
+      "protein_g": 1.1,
+      "carbs_g": 8.6,
+      "fat_g": 0.1
+    },
+    "garlic": {
+      "ingredient": "Ail",
+      "kcal": 131,
+      "protein_g": 5.8,
+      "carbs_g": 21,
+      "fat_g": 0.3
+    },
+    "peas": {
+      "ingredient": "Petits pois",
+      "kcal": 72,
+      "protein_g": 5,
+      "carbs_g": 10,
+      "fat_g": 0.8
+    },
+    "passata": {
+      "ingredient": "Coulis de tomate",
+      "kcal": 30,
+      "protein_g": 1.4,
+      "carbs_g": 4.5,
+      "fat_g": 0.3
+    },
+    "olives": {
+      "ingredient": "Olives vertes dénoyautées",
+      "kcal": 145,
+      "protein_g": 1,
+      "carbs_g": 0,
+      "fat_g": 15
+    },
+    "oil": {
+      "ingredient": "Huile d’olive",
+      "kcal": 900,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100
+    },
+    "sesameoil": {
+      "ingredient": "Huile de sésame",
+      "kcal": 900,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100
+    },
+    "soy": {
+      "ingredient": "Sauce soja salée",
+      "kcal": 53,
+      "protein_g": 8,
+      "carbs_g": 4.9,
+      "fat_g": 0.6
+    },
+    "mustard": {
+      "ingredient": "Moutarde de Dijon",
+      "kcal": 150,
+      "protein_g": 7,
+      "carbs_g": 6,
+      "fat_g": 10
+    },
+    "honey": {
+      "ingredient": "Miel",
+      "kcal": 304,
+      "protein_g": 0,
+      "carbs_g": 82,
+      "fat_g": 0
+    },
+    "balsamic": {
+      "ingredient": "Vinaigre balsamique",
+      "kcal": 88,
+      "protein_g": 0,
+      "carbs_g": 17,
+      "fat_g": 0
+    },
+    "lemon": {
+      "ingredient": "Jus de citron",
+      "kcal": 22,
+      "protein_g": 0.3,
+      "carbs_g": 2.5,
+      "fat_g": 0.2
+    },
+    "lemonzest": {
+      "ingredient": "Zeste de citron",
+      "kcal": 47,
+      "protein_g": 1.5,
+      "carbs_g": 5,
+      "fat_g": 0.3
+    },
+    "ginger": {
+      "ingredient": "Gingembre frais râpé",
+      "kcal": 80,
+      "protein_g": 1.8,
+      "carbs_g": 16,
+      "fat_g": 0.8
+    },
+    "cumin": {
+      "ingredient": "Cumin en poudre",
+      "kcal": 375,
+      "protein_g": 18,
+      "carbs_g": 34,
+      "fat_g": 22
+    },
+    "paprika": {
+      "ingredient": "Paprika doux",
+      "kcal": 282,
+      "protein_g": 14,
+      "carbs_g": 19,
+      "fat_g": 13
+    },
+    "curry": {
+      "ingredient": "Curry en poudre",
+      "kcal": 325,
+      "protein_g": 14,
+      "carbs_g": 25,
+      "fat_g": 14
+    },
+    "herbs": {
+      "ingredient": "Herbes de Provence",
+      "kcal": 250,
+      "protein_g": 8,
+      "carbs_g": 30,
+      "fat_g": 6
+    },
+    "parsley": {
+      "ingredient": "Persil frais",
+      "kcal": 36,
+      "protein_g": 3,
+      "carbs_g": 3,
+      "fat_g": 0.8
+    },
+    "basil": {
+      "ingredient": "Basilic frais",
+      "kcal": 23,
+      "protein_g": 3,
+      "carbs_g": 1,
+      "fat_g": 0.6
+    },
+    "salt": {
+      "ingredient": "Sel",
+      "kcal": 0,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0
+    },
+    "peppercorn": {
+      "ingredient": "Poivre noir moulu",
+      "kcal": 250,
+      "protein_g": 10,
+      "carbs_g": 40,
+      "fat_g": 3
+    }
+  }
+}

@@ -763,3 +763,498 @@ const ingredientUsage = {
     ]
   }
 };
+
+Object.assign(ingredientUsage, {
+  "N01": {
+    "ingredients": [
+      "Blanc de poulet cru",
+      "Quinoa (poids cru)",
+      "Courgette",
+      "Oignon",
+      "Huile d’olive",
+      "Jus de citron",
+      "Herbes de Provence",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      5,
+      5,
+      4,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  "N02": {
+    "ingredients": [
+      "Blanc de poulet cru",
+      "Riz basmati (poids cru)",
+      "Skyr nature 0 %",
+      "Épinards frais",
+      "Coulis de tomate",
+      "Oignon",
+      "Huile d’olive",
+      "Curry en poudre",
+      "Paprika doux",
+      "Sel"
+    ],
+    "lastUse": [
+      5,
+      5,
+      4,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      4
+    ]
+  },
+  "N03": {
+    "ingredients": [
+      "Blanc de poulet cru",
+      "Riz basmati (poids cru)",
+      "Brocoli",
+      "Sauce soja salée",
+      "Miel",
+      "Gingembre frais râpé",
+      "Ail",
+      "Huile de sésame"
+    ],
+    "lastUse": [
+      3,
+      4,
+      4,
+      1,
+      1,
+      1,
+      1,
+      2
+    ]
+  },
+  "N04": {
+    "ingredients": [
+      "Blanc de dinde cru",
+      "Penne complètes sèches",
+      "Courgette",
+      "Coulis de tomate",
+      "Oignon",
+      "Huile d’olive",
+      "Paprika doux",
+      "Sel"
+    ],
+    "lastUse": [
+      3,
+      4,
+      2,
+      3,
+      2,
+      2,
+      3,
+      3
+    ]
+  },
+  "N05": {
+    "ingredients": [
+      "Blanc de dinde cru",
+      "Semoule de blé dur sèche",
+      "Coulis de tomate",
+      "Carotte",
+      "Oignon",
+      "Huile d’olive",
+      "Persil frais",
+      "Cumin en poudre",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      3,
+      5,
+      3,
+      1,
+      1,
+      1,
+      0,
+      0,
+      3,
+      0
+    ]
+  },
+  "N06": {
+    "ingredients": [
+      "Blanc de dinde cru",
+      "Pomme de terre crue",
+      "Carotte",
+      "Skyr nature 0 %",
+      "Moutarde de Dijon",
+      "Huile d’olive",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      4,
+      4,
+      4,
+      3,
+      2,
+      1,
+      3,
+      3
+    ]
+  },
+  "N07": {
+    "ingredients": [
+      "Steak haché de bœuf 5 %",
+      "Semoule de blé dur sèche",
+      "Courgette",
+      "Skyr nature 0 %",
+      "Oignon",
+      "Huile d’olive",
+      "Jus de citron",
+      "Cumin en poudre",
+      "Persil frais",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      5,
+      5,
+      5,
+      4,
+      0,
+      1,
+      4,
+      0,
+      4,
+      4,
+      0
+    ]
+  },
+  "N08": {
+    "ingredients": [
+      "Steak haché de bœuf 5 %",
+      "Aubergine",
+      "Pomme de terre crue",
+      "Coulis de tomate",
+      "Skyr nature 0 %",
+      "Parmesan râpé",
+      "Oignon",
+      "Huile d’olive",
+      "Herbes de Provence",
+      "Sel"
+    ],
+    "lastUse": [
+      3,
+      3,
+      3,
+      2,
+      3,
+      3,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  "N09": {
+    "ingredients": [
+      "Filet mignon de porc cru",
+      "Quinoa (poids cru)",
+      "Pomme",
+      "Skyr nature 0 %",
+      "Moutarde de Dijon",
+      "Oignon",
+      "Huile d’olive",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      4,
+      4,
+      4,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3
+    ]
+  },
+  "N10": {
+    "ingredients": [
+      "Filet mignon de porc cru",
+      "Polenta précuite sèche",
+      "Carotte",
+      "Skyr nature 0 %",
+      "Vinaigre balsamique",
+      "Huile d’olive",
+      "Herbes de Provence",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      4,
+      4,
+      4,
+      3,
+      1,
+      1,
+      1,
+      3,
+      3
+    ]
+  },
+  "N11": {
+    "ingredients": [
+      "Pavé de cabillaud cru",
+      "Semoule de blé dur sèche",
+      "Coulis de tomate",
+      "Courgette",
+      "Olives vertes dénoyautées",
+      "Oignon",
+      "Huile d’olive",
+      "Ail",
+      "Herbes de Provence",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      5,
+      5,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  "N12": {
+    "ingredients": [
+      "Pavé de cabillaud cru",
+      "Quinoa (poids cru)",
+      "Poireau",
+      "Skyr nature 0 %",
+      "Huile d’olive",
+      "Jus de citron",
+      "Persil frais",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      4,
+      4,
+      2,
+      3,
+      1,
+      3,
+      3,
+      3,
+      2
+    ]
+  },
+  "N13": {
+    "ingredients": [
+      "Saumon cru",
+      "Lentilles vertes cuites égouttées",
+      "Épinards frais",
+      "Skyr nature 0 %",
+      "Jus de citron",
+      "Oignon",
+      "Huile d’olive",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      4,
+      4,
+      2,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3
+    ]
+  },
+  "N14": {
+    "ingredients": [
+      "Crevettes crues décortiquées",
+      "Fusilli complets secs",
+      "Courgette",
+      "Coulis de tomate",
+      "Huile d’olive",
+      "Ail",
+      "Paprika doux",
+      "Persil frais",
+      "Sel"
+    ],
+    "lastUse": [
+      2,
+      4,
+      1,
+      3,
+      1,
+      2,
+      2,
+      4,
+      3
+    ]
+  },
+  "N15": {
+    "ingredients": [
+      "Crevettes crues décortiquées",
+      "Riz basmati (poids cru)",
+      "Brocoli",
+      "Sauce soja salée",
+      "Huile de sésame",
+      "Gingembre frais râpé",
+      "Ail",
+      "Jus de citron"
+    ],
+    "lastUse": [
+      3,
+      4,
+      3,
+      3,
+      2,
+      2,
+      2,
+      3
+    ]
+  },
+  "N16": {
+    "ingredients": [
+      "Thon au naturel égoutté",
+      "Pois chiches cuits égouttés",
+      "Tomate",
+      "Concombre",
+      "Skyr nature 0 %",
+      "Huile d’olive",
+      "Jus de citron",
+      "Persil frais",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      3,
+      2,
+      2
+    ]
+  },
+  "N17": {
+    "ingredients": [
+      "Thon au naturel égoutté",
+      "Pomme de terre crue",
+      "Coulis de tomate",
+      "Skyr nature 0 %",
+      "Parmesan râpé",
+      "Oignon",
+      "Huile d’olive",
+      "Herbes de Provence",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      3,
+      3,
+      2,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "N18": {
+    "ingredients": [
+      "Thon au naturel égoutté",
+      "Penne complètes sèches",
+      "Petits pois",
+      "Skyr nature 0 %",
+      "Jus de citron",
+      "Huile d’olive",
+      "Persil frais",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      3,
+      1,
+      1
+    ]
+  },
+  "N19": {
+    "ingredients": [
+      "Tofu ferme nature",
+      "Quinoa (poids cru)",
+      "Skyr nature 0 %",
+      "Poivron rouge",
+      "Concombre",
+      "Sauce soja salée",
+      "Miel",
+      "Huile d’olive",
+      "Jus de citron",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      4,
+      4,
+      4,
+      3,
+      4,
+      3,
+      3,
+      2,
+      4,
+      4,
+      4
+    ]
+  },
+  "N20": {
+    "ingredients": [
+      "Œuf entier sans coquille",
+      "Skyr nature 0 %",
+      "Épinards frais",
+      "Pomme de terre crue",
+      "Parmesan râpé",
+      "Huile d’olive",
+      "Sel",
+      "Poivre noir moulu"
+    ],
+    "lastUse": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      2,
+      2
+    ]
+  }
+});
