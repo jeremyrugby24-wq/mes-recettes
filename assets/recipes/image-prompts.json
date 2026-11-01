@@ -1,0 +1,500 @@
+{
+  "generator": "OpenAI image generation",
+  "date": "2026-11-01",
+  "format": "WebP, maximum 960px, quality 80",
+  "recipes": [
+    {
+      "id": "R01",
+      "title": "Poulet façon Buffalo & pommes de terre — sauce maison",
+      "subject": "Homemade Buffalo chicken with roasted potatoes",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R02",
+      "title": "Poêlée méditerranéenne au poulet",
+      "subject": "Poêlée méditerranéenne au poulet: browned chicken breast pieces, sauteed potato cubes, zucchini, red bell pepper, tomato and herbs de Provence. All together in a shallow cream bowl. No lettuce salad.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R03",
+      "title": "Poulet curry rouge thaï",
+      "subject": "Poulet curry rouge thaï: chicken breast chunks in a creamy red Thai coconut curry with red bell pepper and broccoli, beside white jasmine rice in a cream bowl.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R04",
+      "title": "Paëlla au poulet",
+      "subject": "Paëlla au poulet: yellow saffron rice with chicken breast pieces, peas, red bell pepper and tomato in a shallow pan. No seafood.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R05",
+      "title": "Bowl thaï au poulet",
+      "subject": {
+        "id": "R05",
+        "title": "Bowl thaï au poulet",
+        "description": "Bowl frais et riche en protéines associant poulet sauté, vermicelles de riz et légumes croquants.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Nouilles de riz seches",
+          "Carotte",
+          "Concombre",
+          "Pousses de soja",
+          "Huile de sésame",
+          "Epices",
+          "Jus de citron vert",
+          "Sel",
+          "Ail",
+          "Gingembre"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R06",
+      "title": "Pâtes protéinées à la bolognaise",
+      "subject": {
+        "id": "R06",
+        "title": "Pâtes protéinées à la bolognaise",
+        "description": "Pâtes riches en protéines accompagnées d'une sauce bolognaise au bœuf maigre et aux légumes.",
+        "ingredients": [
+          "Boeuf haché 5%",
+          "Pates proteinees",
+          "Tomates concassees",
+          "Oignon jaune",
+          "Carotte",
+          "Ail",
+          "Huile d'olive",
+          "Herbes"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R07",
+      "title": "Saumon & pâtes protéinées à la crème citronnée",
+      "subject": {
+        "id": "R07",
+        "title": "Saumon & pâtes protéinées à la crème citronnée",
+        "description": "Saumon émietté, pâtes protéinées et sauce crémeuse légère au citron et à l'aneth.",
+        "ingredients": [
+          "Saumon",
+          "Pates proteinees",
+          "Creme legere 15%",
+          "Jus de citron",
+          "Aneth frais",
+          "Ail",
+          "Huile d'olive"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R08",
+      "title": "Lasagnes légères au bœuf et mozzarella",
+      "subject": {
+        "id": "R08",
+        "title": "Lasagnes légères au bœuf et mozzarella",
+        "description": "Lasagnes individuelles au bœuf maigre, tomate, béchamel légère et mozzarella gratinée.",
+        "ingredients": [
+          "Boeuf haché 5%",
+          "Feuilles de lasagne seches",
+          "Coulis de tomate",
+          "Lait demi-ecreme",
+          "Farine",
+          "Mozzarella rapée",
+          "Oignon jaune",
+          "Huile d'olive",
+          "Epices"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R09",
+      "title": "Poulet coco, chili & citronnelle",
+      "subject": {
+        "id": "R09",
+        "title": "Poulet coco, chili & citronnelle",
+        "description": "Poulet mijoté dans une sauce coco légèrement pimentée à la citronnelle, servi avec du riz basmati.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Riz basmati sec",
+          "Lait de coco leger",
+          "Citronnelle",
+          "Oignon jaune",
+          "Huile vegetale",
+          "Gingembre",
+          "Epices",
+          "Jus de citron vert",
+          "Sel"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R10",
+      "title": "Émincé de bœuf aux légumes & riz complet",
+      "subject": {
+        "id": "R10",
+        "title": "Émincé de bœuf aux légumes & riz complet",
+        "description": "Bœuf maigre sauté au wok avec brocoli, carotte et riz complet, relevé à la sauce soja.",
+        "ingredients": [
+          "Boeuf maigre",
+          "Brocoli",
+          "Carotte",
+          "Riz complet sec",
+          "Huile de sésame",
+          "Gingembre",
+          "Ail",
+          "Jus de citron vert",
+          "Sel"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R11",
+      "title": "Poulet gratiné à la mozzarella",
+      "subject": {
+        "id": "R11",
+        "title": "Poulet gratiné à la mozzarella",
+        "description": "Filet de poulet doré, coulis de tomate aux herbes et mozzarella fondante, avec une portion de riz.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Mozzarella rapée",
+          "Coulis de tomate",
+          "Riz basmati sec",
+          "Huile d'olive",
+          "Ail",
+          "Herbes"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R12",
+      "title": "Poulet aux légumes & fromage fondant",
+      "subject": {
+        "id": "R12",
+        "title": "Poulet aux légumes & fromage fondant",
+        "description": "Poêlée de poulet et légumes avec une touche de fromage fondant, accompagnée de riz basmati.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Courgette",
+          "Carotte",
+          "Fromage fondant leger",
+          "Riz basmati sec",
+          "Huile d'olive",
+          "Ail"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R13",
+      "title": "Couscous rouge au poulet & courgettes",
+      "subject": {
+        "id": "R13",
+        "title": "Couscous rouge au poulet & courgettes",
+        "description": "Semoule parfumée aux épices, poulet mijoté dans une sauce tomate et courgettes.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Semoule moyenne seche",
+          "Courgette",
+          "Coulis de tomate",
+          "Bouillon",
+          "Oignon jaune",
+          "Huile d'olive",
+          "Epices"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R14",
+      "title": "Bowl poulet & patate douce",
+      "subject": {
+        "id": "R14",
+        "title": "Bowl poulet & patate douce",
+        "description": "Bowl simple et rassasiant avec poulet grillé, patate douce rôtie, jeunes pousses et vinaigrette balsamique.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Patate douce",
+          "Jeunes pousses",
+          "Huile d'olive",
+          "Vinaigre balsamique",
+          "Epices"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R15",
+      "title": "Poulet haché épicé à l'indienne",
+      "subject": {
+        "id": "R15",
+        "title": "Poulet haché épicé à l'indienne",
+        "description": "Poulet haché mijoté avec tomate, petits pois et épices indiennes, servi avec du riz basmati.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Riz basmati sec",
+          "Petits pois",
+          "Tomates concassees",
+          "Oignon jaune",
+          "Ail",
+          "Gingembre",
+          "Huile vegetale",
+          "Epices"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R16",
+      "title": "Poulet au chou rouge & spätzle",
+      "subject": {
+        "id": "R16",
+        "title": "Poulet au chou rouge & spätzle",
+        "description": "Poulet poêlé, spätzle dorés et chou rouge légèrement acidulé avec des dés de pomme.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Spaetzle",
+          "Chou rouge",
+          "Pomme",
+          "Vinaigre de cidre",
+          "Beurre",
+          "Huile d'olive"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R17",
+      "title": "Spätzle à l'émincé de bœuf & champignons",
+      "subject": {
+        "id": "R17",
+        "title": "Spätzle à l'émincé de bœuf & champignons",
+        "description": "Lamelles de bœuf, spätzle dorés et sauce crémeuse légère aux champignons.",
+        "ingredients": [
+          "Boeuf maigre",
+          "Spaetzle",
+          "Champignons de Paris",
+          "Creme legere 12%",
+          "Echalote",
+          "Beurre",
+          "Persil frais"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R18",
+      "title": "Cheeseburger bowl — sauce burger maison",
+      "subject": {
+        "id": "R18",
+        "title": "Cheeseburger bowl — sauce burger maison",
+        "description": "Bowl façon cheeseburger avec bœuf, cheddar, crudités, pommes de terre rôties et petite sauce burger maison.",
+        "ingredients": [
+          "Boeuf haché 5%",
+          "Cheddar",
+          "Salade iceberg",
+          "Tomate",
+          "Cornichons",
+          "Oignon jaune",
+          "Fromage blanc 3%",
+          "Moutarde",
+          "Concentré de tomate",
+          "Paprika fumé",
+          "Pomme de terre",
+          "Sel"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R19",
+      "title": "Thai Panang au poulet",
+      "subject": {
+        "id": "R19",
+        "title": "Thai Panang au poulet",
+        "description": "Curry panang crémeux au poulet, poivron et riz jasmin avec une quantité maîtrisée de lait de coco.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Riz jasmin sec",
+          "Lait de coco leger",
+          "Pâte de curry panang",
+          "Poivron rouge",
+          "Sucre de coco",
+          "Jus de citron vert",
+          "Sel"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R20",
+      "title": "Penne protéinées à la bolognaise",
+      "subject": {
+        "id": "R20",
+        "title": "Penne protéinées à la bolognaise",
+        "description": "Penne protéinées avec bœuf maigre, sauce tomate et herbes italiennes.",
+        "ingredients": [
+          "Penne proteinees",
+          "Boeuf haché 5%",
+          "Coulis de tomate",
+          "Oignon jaune",
+          "Ail",
+          "Huile d'olive",
+          "Herbes"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R21",
+      "title": "Fusilli protéinés crémeux à la citronnelle (végétarien)",
+      "subject": {
+        "id": "R21",
+        "title": "Fusilli protéinés crémeux à la citronnelle (végétarien)",
+        "description": "Fusilli protéinés, tofu doré et sauce crémeuse légère parfumée à la citronnelle et au citron vert.",
+        "ingredients": [
+          "Fusilli proteines",
+          "Creme vegetale legere",
+          "Citronnelle",
+          "Echalote",
+          "Tofu ferme",
+          "Jus de citron vert",
+          "Huile d'olive"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R22",
+      "title": "Poulet à la crème de champignons",
+      "subject": {
+        "id": "R22",
+        "title": "Poulet à la crème de champignons",
+        "description": "Poulet doré et champignons dans une sauce crémeuse légère à la moutarde, servi avec du riz basmati.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Champignons de Paris",
+          "Creme legere 12%",
+          "Riz basmati sec",
+          "Echalote",
+          "Moutarde",
+          "Huile d'olive",
+          "Ail"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R23",
+      "title": "Poulet croustillant coco & riz — sauce aigre-douce maison",
+      "subject": {
+        "id": "R23",
+        "title": "Poulet croustillant coco & riz — sauce aigre-douce maison",
+        "description": "Aiguillettes de poulet croustillantes à la coco et à la chapelure, avec riz basmati et petite sauce aigre-douce maison.",
+        "ingredients": [
+          "Poulet (blanc, cru)",
+          "Noix de coco râpée",
+          "Chapelure",
+          "Oeuf",
+          "Riz basmati sec",
+          "Coulis de tomate",
+          "Vinaigre de cidre",
+          "Miel",
+          "Jus de citron",
+          "Piment en poudre",
+          "Huile d'olive",
+          "Sel"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "R24",
+      "title": "Chili con carne léger",
+      "subject": {
+        "id": "R24",
+        "title": "Chili con carne léger",
+        "description": "Chili de bœuf, haricots rouges, maïs, tomate et poivron servi avec une petite portion de riz.",
+        "ingredients": [
+          "Boeuf haché 5%",
+          "Haricots rouges egouttes",
+          "Mais doux",
+          "Tomates concassees",
+          "Oignon jaune",
+          "Poivron rouge",
+          "Riz blanc sec",
+          "Ail",
+          "Huile d'olive",
+          "Epices"
+        ]
+      },
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-dinde-curry-riz",
+      "title": "Émincé de dinde au curry crémeux & riz basmati",
+      "subject": "Diced turkey breast in creamy yellow curry sauce with onion, beside basmati rice. A single serving in a cream ceramic plate.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-wok-boeuf-nouilles",
+      "title": "Wok de bœuf haché 5 % aux nouilles sautées & légumes croquants",
+      "subject": "Stir fried thin Chinese wheat noodles with visibly crumbled lean ground beef, strips of red pepper and zucchini, soy sauce, ginger and garlic in a cream bowl. No soup, no beef strips.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-poulet-galette-pdt",
+      "title": "Poulet rôti aux herbes & galette de pommes de terre croustillante",
+      "subject": "One herb roasted chicken breast beside one large crispy grated potato pancake bound with egg. Cream ceramic plate. No fried egg on top.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-cabillaud-croute-herbes",
+      "title": "Pavé de cabillaud en croûte d’herbes & écrasé de pommes de terre",
+      "subject": "Thick white cod fillet topped with golden green parsley and chive breadcrumb crust, beside rustic olive oil mashed potatoes. No salmon.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-crevettes-semoule",
+      "title": "Poêlée de crevettes à l’ail, tomates cerises & semoule parfumée",
+      "subject": "Sauteed peeled pink shrimp with garlic, halved cherry tomatoes and parsley on a bed of fine pale golden couscous grains. No rice, no pasta.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-burger-bowl-montagnard",
+      "title": "Burger bowl montagnard au bœuf 5 %",
+      "subject": "Burger bowl without bread: one lean ground beef patty topped with melted raclette cheese, a crispy grated potato pancake, lettuce and sliced cornichons, small dab of grain mustard in cream ceramic bowl. No burger bun, no bread.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-poulet-pesto-rouge-pates",
+      "title": "Émincé de poulet au pesto rouge, tomates séchées & spaghettis complets",
+      "subject": "Whole wheat spaghetti coated in RED sun dried tomato pesto, browned sliced chicken breast, visible sun dried tomatoes, grated parmesan and a few basil leaves. Sauce must be red, not green.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-dinde-poireaux-chevre",
+      "title": "Poêlée de dinde aux poireaux & fondue de chèvre frais",
+      "subject": "Diced turkey breast mixed with softly cooked pale green leek rounds in a creamy fresh goat cheese sauce, beside brown rice. Not a salad.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-boeuf-poivrons-quinoa",
+      "title": "Steak haché 5 % aux poivrons marinés & quinoa aux épices",
+      "subject": "One lean ground beef steak patty beside golden cumin paprika quinoa, sauteed strips of yellow bell pepper and red onion glazed with balsamic vinegar. No grilled steak cut, no ribs.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    },
+    {
+      "id": "ajout-poulet-champignons-polenta",
+      "title": "Blanc de poulet au thym, fondue de champignons & polenta crémeuse",
+      "subject": "Thyme roasted chicken breast on creamy pale golden polenta, beside browned sliced button mushrooms. No rice, no pasta.",
+      "style": "Photorealistic home-cooked single serving, cream ceramic plate, warm beige table, natural window light, three-quarter overhead view; no text or logos."
+    }
+  ]
+}
