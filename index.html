@@ -153,6 +153,7 @@ img{color:#777366}
 .emptyResults{grid-column:1/-1;text-align:center;padding:44px 20px;background:var(--card);border:1px solid var(--line);border-radius:20px}.emptyResults h2{font-family:Georgia,serif}.imageNote{font-size:12px;color:var(--muted);margin:28px 0 0;text-align:center}.controls[hidden]{display:none}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="stylesheet" href="assets/cooking.css">
 </head>
 <body>
 <main class="wrap">
@@ -160,6 +161,7 @@ img{color:#777366}
 <div class="brandBlock"><div class="brandIcon" aria-hidden="true">🍅</div><div class="brandCopy"><span class="brandEyebrow">LA CUISINE DU QUOTIDIEN</span><h1>Mes recettes</h1><p>Des idées simples, gourmandes et riches en protéines.</p></div></div>
 <nav class="headActions" aria-label="Navigation principale"><button class="btn secondary" id="openPlan" aria-label="Mon planning">📅 Mon planning</button><button class="btn secondary" id="openAuth" aria-label="Mon compte">👤 Connexion</button><button class="btn cartBtn" id="openCart">🛒 Courses <span id="cc">0</span></button></nav>
 </header>
+<section class="catalogueWelcome" aria-labelledby="welcomeTitle"><div><span class="cookEyebrow">LE PLAISIR DE FAIRE MAISON</span><h2 id="welcomeTitle">De bonnes idées.<br>Et le plaisir de les cuisiner.</h2><p>Choisis ton plat, prépare tes ingrédients et laisse-toi guider, une étape à la fois.</p></div><div class="welcomeDrawing" aria-hidden="true">🥕 🍋 🌿</div></section>
 <section id="planPanel" class="panel" hidden></section>
 <div class="controls" id="recipeControls">
 <input id="q" type="search" aria-label="Rechercher une recette ou un ingrédient" placeholder="🔎 Rechercher une recette ou un ingrédient…" autocomplete="off">
@@ -218,25 +220,12 @@ function render(){
  updateCartCount();
 }
 
-function openRecipe(id){
- const r=R.find(x=>x.id===id);if(!r)return;
- currentRecipe=r;currentPortions=1;drawModal();document.getElementById("overlay").classList.add("open");document.getElementById("overlay").setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
-}
-function closeModal(){document.getElementById("overlay").classList.remove("open");document.getElementById("overlay").setAttribute("aria-hidden","true");document.body.style.overflow="";currentRecipe=null}
-function drawModal(){
- const r=currentRecipe,n=r.nutrition_per_serving||{},t=timeOf(r);
- const ing=(r.ingredients||[]).map(i=>'<li><span>'+esc(i.ingredient)+'</span><b>'+fmt(num(i.qty)*currentPortions)+' '+esc(i.unit||"")+'</b></li>').join("");
- const steps=(r.steps||[]).map(x=>'<li>'+esc(x.text||x)+'</li>').join("");
- document.getElementById("overlay").innerHTML='<div class="modalBox" role="dialog" aria-modal="true" aria-labelledby="recipeTitle"><img class="modalHero" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+' — illustration générée par IA"><div class="modalScroll"><div class="modalTop"><div><h2 id="recipeTitle">'+esc(r.title)+'</h2><p class="modalDesc">'+esc(r.description||"")+'</p></div><button class="iconBtn" id="closeModal" aria-label="Fermer">✕</button></div>'+nutrition(n,currentPortions)+(t?'<div class="stat">⏱️ Temps total : <b>'+fmt(t)+' min</b></div>':"")+'<div class="portionBar"><button class="stepBtn" id="minus" aria-label="Diminuer">−</button><div class="portionValue"><span id="portionNumber">'+currentPortions+'</span> portion'+(currentPortions>1?"s":"")+'</div><button class="stepBtn" id="plus" aria-label="Augmenter">+</button></div><h3 class="sectionTitle">Ingrédients</h3><ul class="ings">'+ing+'</ul><h3 class="sectionTitle">Préparation</h3><ol class="steps">'+steps+'</ol><div class="modalActions"><button class="btn" id="addCart">🛒 Ajouter '+currentPortions+' portion'+(currentPortions>1?"s":"")+' au panier</button></div></div></div>';
-}
-function changePortions(delta){currentPortions=Math.max(1,Math.min(20,currentPortions+delta));drawModal()}
 function addToCart(){
  const id=currentRecipe.id;cart[id]=(cart[id]||0)+currentPortions;saveCart();showToast(currentPortions+" portion"+(currentPortions>1?"s":"")+" ajoutée"+(currentPortions>1?"s":"")+" au panier");closeModal();openDrawer();
 }
 
 function cartText(){
- const ids=Object.keys(cart).filter(id=>num(cart[id])>0), total={};
- ids.map(id=>R.find(r=>r.id===id)).filter(Boolean).forEach(r=>(r.ingredients||[]).forEach(i=>{const k=i.ingredient+"|"+i.unit;if(!total[k])total[k]={name:i.ingredient,unit:i.unit,qty:0};total[k].qty+=num(i.qty)*num(cart[r.id])}));
+ const total=shoppingIngredients();
  return "LISTE DE COURSES\n\n"+Object.values(total).map(i=>"• "+i.name+" : "+fmt(i.qty)+" "+(i.unit||"")).join("\n");
 }
 function startActionCooldown(id){const btn=document.getElementById(id);if(!btn||btn.disabled)return false;btn.disabled=true;const original=btn.textContent;let left=10;btn.textContent=original+" (10 s)";const timer=setInterval(()=>{left--;if(left<=0){clearInterval(timer);btn.disabled=false;btn.textContent=original}else btn.textContent=original+" ("+left+" s)"},1000);return true}
@@ -263,10 +252,9 @@ function printCart(){if(!startActionCooldown("printCart"))return;const w=window.
 function renderCart(){
  const drawer=document.getElementById("drawer"),ids=Object.keys(cart).filter(id=>num(cart[id])>0);
  if(!ids.length){drawer.innerHTML='<div class="drawerHead"><h2>🛒 Liste de courses</h2><button class="iconBtn" id="closeCart">✕</button></div><div class="drawerBody"><div class="empty">Ton panier est vide.<br>Ajoute des recettes pour créer ta liste de courses.</div></div>';return}
- let total={};
+ const total=shoppingIngredients();
  const recipes=ids.map(id=>R.find(r=>r.id===id)).filter(Boolean);
- recipes.forEach(r=>(r.ingredients||[]).forEach(i=>{const k=i.ingredient+"|"+i.unit;if(!total[k])total[k]={name:i.ingredient,unit:i.unit,qty:0};total[k].qty+=num(i.qty)*num(cart[r.id])}));
- drawer.innerHTML='<div class="drawerHead"><h2>🛒 Liste de courses</h2><button class="iconBtn" id="closeCart">✕</button></div><div class="drawerBody"><h3>Recettes sélectionnées</h3>'+recipes.map(r=>'<div class="cartRecipe"><img class="cartRecipeImage" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+'" data-open="'+esc(r.id)+'"><div class="cartRecipeMain"><div class="cartRecipeTitle" data-open="'+esc(r.id)+'">'+esc(r.title)+'</div><div class="qtyRow"><button data-cart-minus="'+esc(r.id)+'">−</button><span class="qty">'+cart[r.id]+'</span><button data-cart-plus="'+esc(r.id)+'">+</button><button class="remove" data-cart-remove="'+esc(r.id)+'">Supprimer</button></div></div></div>').join("")+'<div class="shopping"><h3>🛒 Ingrédients à acheter</h3><div class="cartActions"><button class="btn" id="addCartPlan">📅 Ajouter les recettes au planning</button><button class="btn" id="copyCart">📋 Copier</button><button class="btn shareBtn" id="shareCart">↗️ Partager</button><button class="btn shareBtn" id="exportCart">📄 Exporter</button><button class="btn shareBtn" id="printCart">🖨️ Imprimer</button></div><ul class="shoppingList">'+Object.values(total).map(i=>'<li><span>'+esc(i.name)+'</span><b>'+fmt(i.qty)+' '+esc(i.unit||"")+'</b></li>').join("")+'</ul></div></div><div class="drawerFoot"><button class="btn danger" id="clearCart">Vider le panier</button></div>';
+ drawer.innerHTML='<div class="drawerHead"><h2>🛒 Liste de courses</h2><button class="iconBtn" id="closeCart">✕</button></div><div class="drawerBody"><h3>Recettes sélectionnées</h3>'+recipes.map(r=>'<div class="cartRecipe"><img class="cartRecipeImage" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+'" data-open="'+esc(r.id)+'"><div class="cartRecipeMain"><div class="cartRecipeTitle" data-open="'+esc(r.id)+'">'+esc(r.title)+'</div><div class="qtyRow"><button data-cart-minus="'+esc(r.id)+'">−</button><span class="qty">'+cart[r.id]+'</span><button data-cart-plus="'+esc(r.id)+'">+</button><button class="remove" data-cart-remove="'+esc(r.id)+'">Supprimer</button></div></div></div>').join("")+'<div class="shopping"><h3>🛒 Ingrédients à acheter</h3><div class="cartActions"><button class="btn" id="addCartPlan">📅 Ajouter les recettes au planning</button><button class="btn" id="copyCart">📋 Copier</button><button class="btn shareBtn" id="shareCart">↗️ Partager</button><button class="btn shareBtn" id="exportCart">📄 Exporter</button><button class="btn shareBtn" id="printCart">🖨️ Imprimer</button></div><ul class="shoppingList">'+Object.values(total).map(i=>'<li><span><span class="ingredientPicture" aria-hidden="true">'+ingredientIcon(i.name)+'</span>'+esc(i.name)+'</span><b>'+fmt(i.qty)+' '+esc(i.unit||"")+'</b></li>').join("")+'</ul></div></div><div class="drawerFoot"><button class="btn danger" id="clearCart">Vider le panier</button></div>';
 }
 function openDrawer(){renderCart();document.getElementById("drawer").classList.add("open");document.getElementById("drawerShade").classList.add("open");document.getElementById("drawer").setAttribute("aria-hidden","false");}
 function closeDrawer(){document.getElementById("drawer").classList.remove("open");document.getElementById("drawerShade").classList.remove("open");document.getElementById("drawer").setAttribute("aria-hidden","true")}
@@ -295,7 +283,7 @@ function renderAuth(){
  const p=document.getElementById("authPanel");
  if(userSession){
   const meta=userSession.user.user_metadata||{},name=meta.full_name||meta.name||userSession.user.email?.split("@")[0]||"Mon compte",avatar=meta.avatar_url||meta.picture;
-  p.innerHTML='<div class="modalTop"><div><h2 id="recipeTitle">👤 Bonjour '+esc(name.trim().split(/\s+/)[0])+' !</h2>'+(avatar?'<img class="accountAvatar" src="'+esc(avatar)+'" alt="" style="width:54px;height:54px;margin:12px 0">':'')+'<p class="modalDesc">Connecté avec <b>'+esc(userSession.user.email||"")+'</b></p></div></div><button class="btn danger" id="signOut">Se déconnecter</button>';
+  p.innerHTML='<div class="modalTop"><div><h2>👤 Bonjour '+esc(name.trim().split(/\s+/)[0])+' !</h2>'+(avatar?'<img class="accountAvatar" src="'+esc(avatar)+'" alt="" style="width:54px;height:54px;margin:12px 0">':'')+'<p class="modalDesc">Connecté avec <b>'+esc(userSession.user.email||"")+'</b></p></div></div><button class="btn danger" id="signOut">Se déconnecter</button>';
   updateAccountButton();return;
  }
  updateAccountButton();
@@ -337,7 +325,7 @@ function renderPlan(){
  const p=document.getElementById("planPanel");
  if(!userSession){p.innerHTML='<h2>📅 Mon planning</h2><p>Connecte-toi pour créer ton planning personnel.</p><button class="btn" id="planLogin">Se connecter</button>';return}
  const active=plannedRecipes;
- p.innerHTML='<div class="modalTop"><div><h2 id="recipeTitle">📅 Mon planning</h2><p class="modalDesc">Clique sur une recette pour revoir sa fiche. Les recettes réalisées disparaissent ici après 7 jours.</p></div><button class="iconBtn" id="refreshPlan" aria-label="Actualiser">↻</button></div>'+(active.length?active.map(item=>{const r=R.find(x=>String(x.id)===String(item.recipe_id));return '<div class="planRecipeRow '+(item.completed_at?'planDone':'')+'"><input type="checkbox" data-plan-done="'+esc(item.id)+'" '+(item.completed_at?'checked':'')+' aria-label="Recette réalisée">'+(r?'<img class="planRecipeImage" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+'" data-open="'+esc(r.id)+'">':'<div class="planRecipeImage"></div>')+'<div class="planRecipeMain"><button class="planRecipeTitleButton" data-open="'+esc(r?.id||"")+'">'+esc(r?.title||"Recette")+'</button><small class="planTitle">'+(item.completed_at?'Réalisée le '+new Date(item.completed_at).toLocaleDateString("fr-FR"):(item.portions||1)+' portion(s) prévue(s)')+'</small></div><button data-plan-remove="'+esc(item.id)+'">Retirer</button></div>'}).join(""):'<p>Ton planning est vide. Ajoute des recettes au panier, puis utilise « Ajouter les recettes au planning ».</p>');
+ p.innerHTML='<div class="modalTop"><div><h2>📅 Mon planning</h2><p class="modalDesc">Clique sur une recette pour revoir sa fiche. Les recettes réalisées disparaissent ici après 7 jours.</p></div><button class="iconBtn" id="refreshPlan" aria-label="Actualiser">↻</button></div>'+(active.length?active.map(item=>{const r=R.find(x=>String(x.id)===String(item.recipe_id));return '<div class="planRecipeRow '+(item.completed_at?'planDone':'')+'"><input type="checkbox" data-plan-done="'+esc(item.id)+'" '+(item.completed_at?'checked':'')+' aria-label="Recette réalisée">'+(r?'<img class="planRecipeImage" src="'+esc(r.image_url||"")+'" alt="'+esc(r.title)+'" data-open="'+esc(r.id)+'">':'<div class="planRecipeImage"></div>')+'<div class="planRecipeMain"><button class="planRecipeTitleButton" data-open="'+esc(r?.id||"")+'">'+esc(r?.title||"Recette")+'</button><small class="planTitle">'+(item.completed_at?'Réalisée le '+new Date(item.completed_at).toLocaleDateString("fr-FR"):(item.portions||1)+' portion(s) prévue(s)')+'</small></div><button data-plan-remove="'+esc(item.id)+'">Retirer</button></div>'}).join(""):'<p>Ton planning est vide. Ajoute des recettes au panier, puis utilise « Ajouter les recettes au planning ».</p>');
 }
 async function addCurrentToPlan(){
  if(!userSession){showPanel("auth");showToast("Connecte-toi pour enregistrer ton planning");return}
@@ -405,5 +393,6 @@ async function load(){
 }
 (async()=>{await refreshSession();await load();})();
 </script>
+<script src="assets/cooking.js"></script>
 </body>
 </html>
