@@ -4,7 +4,7 @@ function environment(html,extension=''){
  const elements={},storage=new Map(),element=id=>elements[id]??={value:id==='f'?'all':id==='sort'?'default':'',innerHTML:'',textContent:'',style:{},scrollTop:0,hidden:false,classList:{add(){},remove(){},toggle(){}},querySelector(){return {scrollTop:0}},setAttribute(){},addEventListener(){},focus(){},scrollIntoView(){}};
  const context=vm.createContext({console,Blob,Response,DecompressionStream,Uint8Array,atob,setTimeout,clearTimeout,navigator:{},sessionStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},window:{supabase:{createClient(){return {}}}},localStorage:{getItem(){return null}},document:{getElementById:element,querySelector:element,addEventListener(){},body:{classList:{contains(){return false}},style:{}}}});
  const source=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]).filter(Boolean).join('\n').replace('(async()=>{await refreshSession();await load();})();','');
- vm.runInContext(source,context);if(extension)vm.runInContext(extension,context);vm.runInContext('renderAuth=()=>{};renderPlan=()=>{}',context);
+ vm.runInContext(source,context);if(extension){vm.runInContext(fs.readFileSync(path.join(root,'assets/ingredient-usage.js'),'utf8'),context);vm.runInContext(extension,context);}vm.runInContext('renderAuth=()=>{};renderPlan=()=>{}',context);
  return {context,element,run:s=>vm.runInContext(s,context)};
 }
 (async()=>{
@@ -21,11 +21,30 @@ function environment(html,extension=''){
  assert.notEqual(e.run('canonicalIngredient("Riz basmati sec")'),e.run('canonicalIngredient("Riz jasmin sec")'));
  e.run('R.push({id:"units",ingredients:[{ingredient:"Huile d’olive",qty:4,unit:"g"},{ingredient:"Huile d\'olive",qty:5,unit:"ml"}]});cart={units:1}');assert.equal(e.run('Object.keys(shoppingIngredients()).length'),2);e.run('R.pop()');
  e.run('cart={R22:1,"ajout-poulet-champignons-polenta":2}');assert.equal((e.run('cartText()').match(/Champignons de Paris/g)||[]).length,1);assert.ok(!e.run('cartText()').includes('\\n'));e.run('renderCart()');assert.match(e.element('drawer').innerHTML,/ingredientPicture/);
- for(const id of JSON.parse(e.run('JSON.stringify(R.map(r=>r.id))'))){e.run('openRecipe('+JSON.stringify(id)+')');const content=e.element('overlay').innerHTML;assert.match(content,/role="dialog"/);assert.match(content,/cookIngredientPanel/);assert.equal((content.match(/data-cook-done=/g)||[]).length,e.run('currentRecipe.steps.length'));assert.equal((content.match(/data-cook-ingredient=/g)||[]).length,e.run('currentRecipe.ingredients.length'));e.run('changePortions(1)');e.run('closeModal()')}
+ for(const id of JSON.parse(e.run('JSON.stringify(R.map(r=>r.id))'))){e.run('openRecipe('+JSON.stringify(id)+')');assert.match(e.element('overlay').innerHTML,/recipePhoto/);assert.match(e.element('overlay').innerHTML,/id="addCart"/);assert.match(e.element('overlay').innerHTML,/id="launchRecipe"/);e.run('launchRecipe()');const content=e.element('overlay').innerHTML;assert.match(content,/role="dialog"/);assert.match(content,/cookIngredientPanel/);assert.equal((content.match(/data-cook-done=/g)||[]).length,e.run('currentRecipe.steps.length'));assert.equal((content.match(/data-cook-ingredient=/g)||[]).length,e.run('currentRecipe.ingredients.length'));e.run('changePortions(1)');e.run('closeModal()')}
  e.run('openRecipe("R01");cookState.step=2;cookState.done=[0];cookState.ingredients=[1];cookState.guided=true;saveCookState();closeModal();openRecipe("R01")');assert.equal(e.run('cookState.step'),2);assert.equal(e.run('cookState.done[0]'),0);assert.equal(e.run('cookState.ingredients[0]'),1);assert.equal(e.run('cookState.guided'),true);
- e.run('navigateCooking(100)');assert.equal(e.run('cookState.step'),6);e.run('navigateCooking(-100)');assert.equal(e.run('cookState.step'),0);e.run('changePortions(-100)');assert.equal(e.run('currentPortions'),1);e.run('changePortions(100)');assert.equal(e.run('currentPortions'),20);
+ e.run('launchRecipe();navigateCooking(1)');assert.equal(e.run('cookState.step'),3);assert.equal(e.run('cookState.done.includes(2)'),true);e.run('navigateCooking(-1)');assert.equal(e.run('cookState.step'),2);assert.equal(e.run('cookState.done.includes(2)'),false);e.run('changePortions(-100)');assert.equal(e.run('currentPortions'),1);e.run('changePortions(100)');assert.equal(e.run('currentPortions'),20);
+ for(const id of JSON.parse(e.run('JSON.stringify(R.map(r=>r.id))'))){
+ e.run('openRecipe('+JSON.stringify(id)+');launchRecipe()');
+ assert.equal(e.run('ingredientUsage[currentRecipe.id].lastUse.length'),e.run('currentRecipe.ingredients.length'));
+ assert.equal(e.run('ingredientUsage[currentRecipe.id].ingredients.every((name,i)=>name===currentRecipe.ingredients[i].ingredient)'),true);
+ assert.equal(e.run('ingredientUsage[currentRecipe.id].lastUse.every(i=>i===null||Number.isInteger(i)&&i>=0&&i<currentRecipe.steps.length)'),true);
+ }
+ // Split garlic and paprika must remain unchecked until their later use.
+ e.run('openRecipe("R01");launchRecipe();cookState.done=[];cookState.ingredients=[];cookState.ingredientOverrides={};validateCookingStep(3,true)');
+ assert.equal(e.run('cookState.step'),4);assert.equal(e.run('isIngredientChecked(2)'),true);assert.equal(e.run('isIngredientChecked(7)'),false);assert.equal(e.run('isIngredientChecked(5)'),true);
+ e.run('validateCookingStep(4,true)');assert.equal(e.run('isIngredientChecked(7)'),true);e.run('navigateCooking(-1)');assert.equal(e.run('cookState.done.includes(4)'),false);assert.equal(e.run('isIngredientChecked(7)'),false);
+ // Split oil must remain available after the first use in the potato pancake.
+ e.run('openRecipe("ajout-poulet-galette-pdt");launchRecipe();cookState.done=[];validateCookingStep(2,true)');assert.equal(e.run('isIngredientChecked(3)'),false);e.run('navigateCooking(1)');assert.equal(e.run('isIngredientChecked(3)'),true);
+ // Known ingredients missing from existing instructions stay manual.
+ e.run('openRecipe("R03");launchRecipe();cookState.done=[0,1,2,3,4,5];cookState.ingredients=[]');assert.equal(e.run('isIngredientChecked(6)'),false);
+ // Portions and macro totals remain available in consultation and through cooking.
+ e.run('openRecipe("R01");changePortions(1)');assert.match(e.element('overlay').innerHTML,/932 kcal/);assert.match(e.element('overlay').innerHTML,/320 g/);assert.match(e.element('overlay').innerHTML,/Ajouter 2 portions au panier/);
+ e.run('launchRecipe();showRecipeDetails()');assert.equal(e.run('currentPortions'),2);assert.match(e.element('overlay').innerHTML,/932 kcal/);
+ // Final validation completes the recipe without an extra click.
+ e.run('launchRecipe();cookState.done=[0,1,2,3,4,5];cookState.step=6;validateCookingStep(6,true)');assert.equal(e.run('cookState.done.length'),7);assert.match(e.element('overlay').innerHTML,/Bon appétit/);
  assert.equal(e.run('JSON.stringify(R)'),original,'Cooking and shopping must never mutate recipe data');
  e.element('q').value='boeuf';e.run('render()');assert.match(e.element('grid').innerHTML,/bœuf/);e.element('q').value='';e.element('f').value='fast';e.run('render()');assert.ok(!e.element('grid').innerHTML.includes('Lasagnes'));
  if(process.argv[2]){const old=environment(fs.readFileSync(process.argv[2],'utf8'));await old.run('load()');assert.equal(original,old.run('JSON.stringify(R)'),'All 34 recipes must remain byte-for-byte identical after loading')}
- console.log('PASS: 34 recettes inchangées, fiches complètes, portions, navigation, reprise de progression, regroupement des courses, unités et produits distincts, recherche et filtre.');
+ console.log('PASS: 34 recettes inchangées ; consultation/panier/macros ; validation et retour ; ingrédients à usages multiples ; fin de recette ; portions et progression ; courses, recherche et filtres.');
 })().catch(e=>{console.error(e);process.exitCode=1});
