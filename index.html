@@ -233,8 +233,9 @@ img{color:#777366}
 <div id="drawerShade" class="drawerShade"></div><div id="toast" class="toast"></div>
 
 <script src="assets/new-recipes.js?v=4"></script>
-<script src="assets/ingredient-photos.js?v=5"></script>
-<script src="assets/ingredient-filters.js?v=5"></script>
+<script src="assets/comfort-recipes.js?v=1"></script>
+<script src="assets/ingredient-photos.js?v=6"></script>
+<script src="assets/ingredient-filters.js?v=6"></script>
 <script src="assets/personal-space.js?v=6"></script>
 <script src="assets/account.js?v=7"></script>
 <script>
@@ -436,7 +437,7 @@ async function load(){
   const idsExistants=new Set(R.map(r=>String(r.id)));
   R.push(...recettesAjoutees.filter(r=>!idsExistants.has(String(r.id))));
   const allIds=new Set(R.map(r=>r.id));
-  R.push(...additionalRecipes.filter(r=>!allIds.has(r.id)));
+  R.push(...[...additionalRecipes,...comfortRecipes].filter(r=>!allIds.has(r.id)));
   // Une illustration dédiée à chaque identifiant, partagée par toutes les vues.
   R.forEach(recipe=>{recipe.image_url="assets/recipes/"+recipe.id+".webp";});
   render();renderAuth();renderPlan();if(userSession)await loadPlan();
@@ -445,7 +446,8 @@ async function load(){
 (async()=>{await refreshSession();await load();startPersonalRefresh();})();
 </script>
 <script src="assets/ingredient-usage.js?v=4"></script>
+<script src="assets/comfort-usage.js?v=1"></script>
 
-<script src="assets/cooking.js?v=6"></script>
+<script src="assets/cooking.js?v=7"></script>
 </body>
 </html>

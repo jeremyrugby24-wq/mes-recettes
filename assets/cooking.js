@@ -35,7 +35,7 @@ function readCookState(id){try{return JSON.parse(sessionStorage.getItem('cooking
 function saveCookState(){if(currentRecipe)try{sessionStorage.setItem('cooking-'+currentRecipe.id,JSON.stringify(cookState))}catch{}}
 function openRecipe(id){
  const r=R.find(x=>x.id===id);if(!r)return;
- recipeReturnFocus=document.activeElement;currentRecipe=r;currentPortions=1;ingredientsOpen=false;recipeView="details";
+ recipeReturnFocus=document.activeElement;currentRecipe=r;currentPortions=r.default_portions||1;ingredientsOpen=false;recipeView="details";
  const saved=readCookState(id);cookState={step:Math.max(0,Math.min(r.steps.length-1,Number(saved?.step)||0)),done:Array.isArray(saved?.done)?saved.done:[],ingredients:Array.isArray(saved?.ingredients)?saved.ingredients:[],guided:!!saved?.guided,ingredientOverrides:saved?.ingredientOverrides&&typeof saved.ingredientOverrides==="object"?saved.ingredientOverrides:{}};
  const overlay=document.getElementById('overlay');drawModal();overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
  document.querySelector('main').inert=true;document.getElementById('authPanel').inert=true;

@@ -2,6 +2,7 @@
 function ingredientAsset(name){
  const n=searchText(name);
  const rules=[
+ [/raviolis? frais/,'ravioli'],[/allumettes de bacon/,'bacon-matchsticks'],[/jambon blanc/,'ham'],[/haricots verts/,'green-beans'],[/avocat/,'avocado'],[/tortillas?/,'tortillas'],[/pain burger/,'burger-bun'],[/navet/,'turnip'],[/gnocchis?/,'gnocchi'],[/pate brisee/,'shortcrust'],[/reblochon/,'reblochon'],[/sauce a cuisiner pour fajitas/,'fajita-sauce'],[/rumsteck/,'beef-strips'],[/bouillon de boeuf/,'stock'],[/toastinette/,'processed-cheese'],
  [/sel[, ]+poivre|cumin, paprika|persil, sel/,'spice-mix'],[/thym.*ail/,'thyme-garlic'],[/thym/,'thyme'],[/herbes/,'dried-herbs'],[/basilic/,'basil'],[/persil et ciboulette/,'parsley-chives'],[/persil|ciboulette/,'parsley'],[/aneth/,'dill'],[/citronnelle/,'lemongrass'],
  [/champignon/,'button-mushrooms'],[/poulet/,'chicken-breast'],[/dinde/,'turkey-breast'],[/boeuf.*hache|steak hache/,'ground-beef'],[/boeuf/,'beef-strips'],[/filet mignon|porc/,'pork-tenderloin'],[/saumon/,'salmon'],[/cabillaud/,'cod'],[/crevette/,'shrimp'],[/thon/,'tuna'],[/tofu/,'tofu'],[/oeuf/,'eggs'],
  [/huile.*sesame/,'sesame-oil'],[/huile.*olive/,'olive-oil'],[/huile vegetale/,'neutral-oil'],[/olive/,'olives'],[/vinaigre balsamique/,'balsamic-vinegar'],[/vinaigre.*cidre/,'cider-vinegar'],[/sauce soja/,'soy-sauce'],[/pesto rouge/,'red-pesto'],[/pate de curry/,'red-curry-paste'],[/moutarde.*ancienne/,'wholegrain-mustard'],[/moutarde/,'dijon-mustard'],[/miel/,'honey'],

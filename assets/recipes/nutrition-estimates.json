@@ -373,6 +373,216 @@
       "protein_g": 10,
       "carbs_g": 40,
       "fat_g": 3
+    },
+    "comfort_pasta": {
+      "ingredient": "Spaghetti secs",
+      "kcal": 350,
+      "protein_g": 13,
+      "carbs_g": 70,
+      "fat_g": 2
+    },
+    "comfort_bacon": {
+      "ingredient": "Allumettes de bacon maigre",
+      "kcal": 110,
+      "protein_g": 19,
+      "carbs_g": 0.6,
+      "fat_g": 3.5
+    },
+    "comfort_milk": {
+      "ingredient": "Lait écrémé",
+      "kcal": 35,
+      "protein_g": 3.4,
+      "carbs_g": 5,
+      "fat_g": 0.2
+    },
+    "comfort_cream4": {
+      "ingredient": "Crème à 4 %",
+      "kcal": 73,
+      "protein_g": 3,
+      "carbs_g": 6.2,
+      "fat_g": 4
+    },
+    "comfort_beans": {
+      "ingredient": "Haricots verts",
+      "kcal": 31,
+      "protein_g": 1.8,
+      "carbs_g": 4.4,
+      "fat_g": 0.2
+    },
+    "comfort_salad": {
+      "ingredient": "Salade verte",
+      "kcal": 15,
+      "protein_g": 1.4,
+      "carbs_g": 1.5,
+      "fat_g": 0.2
+    },
+    "comfort_ham": {
+      "ingredient": "Jambon blanc découenné et dégraissé",
+      "kcal": 107,
+      "protein_g": 21,
+      "carbs_g": 0.5,
+      "fat_g": 2.5
+    },
+    "comfort_reblochon": {
+      "ingredient": "Reblochon",
+      "kcal": 328,
+      "protein_g": 19.9,
+      "carbs_g": 0.4,
+      "fat_g": 27.4
+    },
+    "comfort_tortilla": {
+      "ingredient": "Tortillas de blé",
+      "kcal": 299,
+      "protein_g": 9.1,
+      "carbs_g": 53.2,
+      "fat_g": 5.2
+    },
+    "comfort_avocado": {
+      "ingredient": "Avocat (chair)",
+      "kcal": 160,
+      "protein_g": 2,
+      "carbs_g": 1.8,
+      "fat_g": 14.7
+    },
+    "comfort_salsa": {
+      "ingredient": "Sauce à cuisiner pour fajitas",
+      "kcal": 45,
+      "protein_g": 1.3,
+      "carbs_g": 7.9,
+      "fat_g": 0.5
+    },
+    "comfort_lime": {
+      "ingredient": "Jus de citron vert",
+      "kcal": 25,
+      "protein_g": 0.4,
+      "carbs_g": 2.5,
+      "fat_g": 0.1
+    },
+    "comfort_ravioli": {
+      "ingredient": "Raviolis frais au bœuf",
+      "kcal": 263,
+      "protein_g": 9.7,
+      "carbs_g": 39,
+      "fat_g": 7.1
+    },
+    "comfort_bun": {
+      "ingredient": "Pain burger",
+      "kcal": 280,
+      "protein_g": 9,
+      "carbs_g": 49,
+      "fat_g": 5
+    },
+    "comfort_pickle": {
+      "ingredient": "Cornichons",
+      "kcal": 15,
+      "protein_g": 0.5,
+      "carbs_g": 2,
+      "fat_g": 0.2
+    },
+    "comfort_slice": {
+      "ingredient": "Toastinette au cheddar",
+      "kcal": 278,
+      "protein_g": 15,
+      "carbs_g": 6,
+      "fat_g": 22
+    },
+    "comfort_paleron": {
+      "ingredient": "Paleron de bœuf paré cru",
+      "kcal": 144,
+      "protein_g": 21,
+      "carbs_g": 0,
+      "fat_g": 6.7
+    },
+    "comfort_turnip": {
+      "ingredient": "Navet",
+      "kcal": 26,
+      "protein_g": 0.9,
+      "carbs_g": 4.7,
+      "fat_g": 0.1
+    },
+    "comfort_mushroom": {
+      "ingredient": "Champignons de Paris frais",
+      "kcal": 22,
+      "protein_g": 3.1,
+      "carbs_g": 1.3,
+      "fat_g": 0.3
+    },
+    "comfort_wine": {
+      "ingredient": "Vin rouge",
+      "kcal": 83,
+      "protein_g": 0.1,
+      "carbs_g": 2.6,
+      "fat_g": 0
+    },
+    "comfort_stock": {
+      "ingredient": "Bouillon de bœuf",
+      "kcal": 5,
+      "protein_g": 0.4,
+      "carbs_g": 0.4,
+      "fat_g": 0.2
+    },
+    "comfort_gnocchi": {
+      "ingredient": "Gnocchis frais à poêler",
+      "kcal": 190,
+      "protein_g": 5,
+      "carbs_g": 35,
+      "fat_g": 2.7
+    },
+    "comfort_steak": {
+      "ingredient": "Steak de rumsteck cru",
+      "kcal": 125,
+      "protein_g": 22,
+      "carbs_g": 0,
+      "fat_g": 4
+    },
+    "comfort_mozza": {
+      "ingredient": "Mozzarella égouttée",
+      "kcal": 240,
+      "protein_g": 20,
+      "carbs_g": 1.5,
+      "fat_g": 17
+    },
+    "comfort_pastry": {
+      "ingredient": "Pâte brisée",
+      "kcal": 388,
+      "protein_g": 5.8,
+      "carbs_g": 45,
+      "fat_g": 20
+    },
+    "comfort_chives": {
+      "ingredient": "Ciboulette fraîche",
+      "kcal": 30,
+      "protein_g": 3.3,
+      "carbs_g": 1.9,
+      "fat_g": 0.7
+    },
+    "comfort_flour": {
+      "ingredient": "Farine de blé",
+      "kcal": 350,
+      "protein_g": 10,
+      "carbs_g": 72,
+      "fat_g": 1.2
+    },
+    "comfort_yeast": {
+      "ingredient": "Levure boulangère sèche",
+      "kcal": 325,
+      "protein_g": 40,
+      "carbs_g": 16,
+      "fat_g": 7
+    },
+    "comfort_water": {
+      "ingredient": "Eau",
+      "kcal": 0,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 0
+    },
+    "comfort_yellow": {
+      "ingredient": "Poivron jaune",
+      "kcal": 29,
+      "protein_g": 1,
+      "carbs_g": 4.5,
+      "fat_g": 0.3
     }
   }
 }
